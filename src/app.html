@@ -64,29 +64,32 @@
 
 
 		function updateCursorPosition(e) {
-			document.documentElement.style.setProperty(
-				"--x",
-				e.clientX + window.scrollX + "px"
-			);
-			document.documentElement.style.setProperty(
-				"--y",
-				e.clientY + window.scrollY + "px"
-			);
-		}
+			const x = (e.clientX || e.touches[0].clientX) + window.scrollX;
+			const y = (e.clientY || e.touches[0].clientY) + window.scrollY;
 
-		document.body.onmousemove = updateCursorPosition;
-		document.body.onscroll = function (e) {
-			// Since e.clientX and e.clientY are not available on scroll events, use the last known mouse position.
-			updateCursorPosition({ clientX: lastMouseX, clientY: lastMouseY });
-		};
+			document.documentElement.style.setProperty('--x', x + 'px');
+			document.documentElement.style.setProperty('--y', y + 'px');
+		}
 
 		let lastMouseX = 0;
 		let lastMouseY = 0;
+
 		document.body.onmousemove = function (e) {
 			lastMouseX = e.clientX;
 			lastMouseY = e.clientY;
 			updateCursorPosition(e);
 		};
+
+		document.body.onscroll = function () {
+			updateCursorPosition({ clientX: lastMouseX, clientY: lastMouseY });
+		};
+
+		document.body.ontouchmove = function (e) {
+			lastMouseX = e.touches[0].clientX;
+			lastMouseY = e.touches[0].clientY;
+			updateCursorPosition(e);
+		};
+
 	</script>
 </body>
 
