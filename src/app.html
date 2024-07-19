@@ -1,29 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Riteek's Portfolio</title>
+
+	<!-- Particles.js -->
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
 		integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover" class="bg-slate-950 text-white relative">
-		<div style="display: contents" class="relative z-[1]">%sveltekit.body%</div>
-		<div class="absolute min-h-screen top-0 left-0 w-full h-full z-[-1] opacity-70">
-			<div id="particles-js" class="absolute inset-0"></div>
-		</div>
-		<script>
-			particlesJS.load("particles-js", "assets/particles.json", function () {
-				console.log("callback - particles.js config loaded");
-			});
-		</script>
-	</body>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Mono+One&display=swap"
+		rel="stylesheet" />
+
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	%sveltekit.head%
+
+	<!-- imports -->
+	<link rel="stylesheet" href="src/app.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<style>
+		body::after {
+			content: "";
+			position: fixed;
+			left: var(--x);
+			top: var(--y);
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			pointer-events: none;
+			transform: translate(-50%, -50%);
+			background-color: transparent;
+			border: 3px solid rgb(155, 5, 255);
+			border-radius: 50%;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			position: absolute;
+			z-index: 300;
+		}
+	</style>
+</head>
+
+<body data-sveltekit-preload-data="hover" class="bg-slate-950 text-white relative">
+
+	<div style="display: contents" class="relative z-[1]">%sveltekit.body%</div>
+	<div class="absolute min-h-screen top-0 left-0 w-full h-full z-[-1] opacity-70">
+		<div id="particles-js" class="absolute inset-0"></div>
+	</div>
+	<script>
+		particlesJS.load("particles-js", "assets/particles.json", function () {
+			console.log("callback - particles.js config loaded");
+		});
+
+
+		function updateCursorPosition(e) {
+			document.documentElement.style.setProperty(
+				"--x",
+				e.clientX + window.scrollX + "px"
+			);
+			document.documentElement.style.setProperty(
+				"--y",
+				e.clientY + window.scrollY + "px"
+			);
+		}
+
+		document.body.onmousemove = updateCursorPosition;
+		document.body.onscroll = function (e) {
+			// Since e.clientX and e.clientY are not available on scroll events, use the last known mouse position.
+			updateCursorPosition({ clientX: lastMouseX, clientY: lastMouseY });
+		};
+
+		let lastMouseX = 0;
+		let lastMouseY = 0;
+		document.body.onmousemove = function (e) {
+			lastMouseX = e.clientX;
+			lastMouseY = e.clientY;
+			updateCursorPosition(e);
+		};
+	</script>
+</body>
+
 </html>
