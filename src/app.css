@@ -2,9 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @keyframes bounce-y {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+  }
+
+  .animate-bounce-y {
+      animation: bounce-y 3s ease-in-out infinite;
+  }
+}
+
 html {
     scroll-behavior: smooth;
     /* cursor: none; */
+    /* cursor: crosshair */
 }
 #circularcursor {
   background-color: transparent;

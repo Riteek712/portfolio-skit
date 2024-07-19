@@ -56,7 +56,7 @@
       <img
         src={"/assets/profile-pic (4).png"}
         alt="Riteek Rakesh"
-        class="object-cover z-[2] max-h-[70vh]"
+        class="animate-bounce-y object-cover z-[2] max-h-[70vh]"
       />
     </div>
 
