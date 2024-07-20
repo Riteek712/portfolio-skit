@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Step from "./Step.svelte";
+  import Card from "./Card.svelte";
+import Step from "./Step.svelte";
   function openLinkedIn() {
     window.open(
       "https://www.linkedin.com/in/riteek-rakesh-459299208/",
@@ -52,7 +53,7 @@
     id="introPage"
     class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"
   >
-    <div class="relative shadow-2xl grid place-items-center">
+    <div class="rounded-full relative shadow-2xl grid place-items-center">
       <img
         src={"/assets/profile-pic (4).png"}
         alt="Riteek Rakesh"
@@ -63,19 +64,19 @@
     <div
       class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"
     >
-      <h1 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-        Hi! I'm <span class="Rubik Mono One text-violet-400">Riteek</span>
+      <h1 class="text-violet-200 font-semibold text-3xl sm:text-4xl md:text-5xl">
+        Hi! I'm <span class="Rubik Mono One text-violet-500">Riteek</span>
         Rakesh,
         <br />Full Stack
-        <span class="Rubik Mono One text-violet-400">Developer</span>
+        <span class="Rubik Mono One text-violet-500">Developer</span>
       </h1>
-      <p class="text-base sm:text-lg md:text-xl">
-        I'm a <span class="text-violet-400">software engineer</span> specializing in creating scalable REST APIs, project leadership, database optimization, UX enhancement, and innovative solutions. I bring years of hands-on experience in full stack project development and can adapt to new technologies swiftly.
+      <p class=" text-[#bcbaf7] text-base  sm:text-lg md:text-xl">
+        I'm a 22 year old <span class="text-[#ffffff]">software engineer</span> specializing in creating scalable REST APIs, project leadership, database optimization, UX enhancement, and innovative solutions.
       </p>
       <button
                 id="linkedinButton"
                 on:click={openLinkedIn}
-                class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950"
+                class="ease-in-out duration-300 hover:bg-violet-900 hover:text-violet-100 blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950"
             >
                 <div
                     class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
@@ -114,6 +115,7 @@
     <h1 class="mx-auto text-3xl underline decoration-double underline-offset-8">My <strong
       class="text-violet-400"
       >Projects</strong></h1>
+    
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
         <Step step={steps[0]}>
             <p>
@@ -140,6 +142,36 @@
                 Users can join specific <strong class="text-violet-400">chat rooms</strong> to chat with each others built with the help of <strong class="text-violet-400">Node.js & Express.js</strong>. Integrated <strong class="text-violet-400">Socket.io</strong> library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates.
             </p>
         </Step>
+        <Card 
+      classname=""
+      href="https://github.com/Riteek712/chat-app-in-Node.js"
+      iconname="fa-solid fa-diagram-project"
+      title="Online private Chat room"
+      description='Users can join specific to chat with each others built with the help of Node.js & Express.js. Integrated library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates.'
+/>
+    </div>
+    <div class="flex flex-row flex-wrap">
+      <Card 
+      classname=""
+      href="https://github.com/Riteek712/chat-app-in-Node.js"
+      iconname="fa-solid fa-diagram-project"
+      title="Online private Chat room"
+      description='Users can join specific to chat with each others built with the help of Node.js & Express.js. Integrated library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates.'
+/>    
+      <Card 
+      classname=""
+      href="https://github.com/Riteek712/chat-app-in-Node.js"
+      iconname="fa-solid fa-tags"
+      title="NFT Marketplace"
+      description='This is an NFT (Non-Fungible Token) marketplace built on Sepolia testnet. The marketplace allows users to mint, buy, and sell NFTs securely using blockchain technology. It is built using Hardhat for Ethereum development,ethers.js for interacting with the Ethereum blockchain, React.js for the frontend, and integrated with Pinata IPFS for d-Storage'
+/>    
+      <Card 
+      classname=""
+      href="https://github.com/Riteek712/chat-app-in-Node.js"
+      iconname="fa-solid fa-cart-shopping"
+      title="E-commerse store API"
+      description='This is a full-fledged E-commerce API developed using the Nest.js framework and powered by a PostgreSQL database. The project aims to provide a robust and scalable backend solution for building eCommerce applications, complete with features for product management, user authentication, cart management, order processing, and more.'
+/>    
     </div>
 </section>
 </main>
