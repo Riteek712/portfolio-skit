@@ -116,7 +116,7 @@ import Step from "./Step.svelte";
       class="text-violet-400"
       >Projects</strong></h1>
     
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+    <!-- <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
         <Step step={steps[0]}>
             <p>
                 This is a full-fledged E-commerce API developed using the <strong
@@ -142,20 +142,13 @@ import Step from "./Step.svelte";
                 Users can join specific <strong class="text-violet-400">chat rooms</strong> to chat with each others built with the help of <strong class="text-violet-400">Node.js & Express.js</strong>. Integrated <strong class="text-violet-400">Socket.io</strong> library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates.
             </p>
         </Step>
-        <Card 
-      classname=""
-      href="https://github.com/Riteek712/chat-app-in-Node.js"
-      iconname="fa-solid fa-diagram-project"
-      title="Online private Chat room"
-      description='Users can join specific to chat with each others built with the help of Node.js & Express.js. Integrated library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates.'
-/>
-    </div>
+    </div> -->
     <div class="flex flex-row flex-wrap">
       <Card 
       classname=""
       href="https://github.com/Riteek712/chat-app-in-Node.js"
       iconname="fa-solid fa-diagram-project"
-      title="Online private Chat room"
+      title="Online Chat room"
       description='Users can join specific to chat with each others built with the help of Node.js & Express.js. Integrated library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates.'
 />    
       <Card 
