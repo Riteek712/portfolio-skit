@@ -25,7 +25,7 @@
   
 <style>
     :global(body) {
-      padding: 50px;
+      /* padding: 50px; */
       display: flex;
       flex-flow: wrap;
       /* font-family: "Ubuntu", sans-serif; */
