@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import Card from "./Card.svelte";
 import Step from "./Step.svelte";
   function openLinkedIn() {
@@ -46,6 +47,63 @@ import Step from "./Step.svelte";
                 "Communication is key and it's a paramount value of mine. I believe in transparency and constructive communication above all else. This helps me develop deep relationships and ensures my effectiveness and productivity in any work space with any team.",
         },
     ];
+
+    // Intersection Observer for fade-in/fade-out
+  function setupIntersectionObserver() {
+    const sections = document.querySelectorAll<HTMLElement>(".fade-section");
+    const options = {
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+          entry.target.classList.remove("fade-out");
+        } else {
+          entry.target.classList.add("fade-out");
+          entry.target.classList.remove("fade-in");
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  }
+
+  // Image tilt effect
+  function setupImageTiltEffect() {
+    const image = document.querySelector("#tilt") as HTMLElement | null;
+
+    if (image) {
+      image.addEventListener("mousemove", (event: MouseEvent) => {
+        const { top, bottom, left, right } = image.getBoundingClientRect();
+
+        const middleX = (right - left) / 2;
+        const middleY = (bottom - top) / 2;
+
+        const clientX = event.clientX;
+        const clientY = event.clientY;
+
+        const offsetX = (clientX - left - middleX) / middleX;
+        const offsetY = (middleY - (clientY - top)) / middleY;
+
+        image.style.transform = `perspective(1000px) rotateY(${offsetX * 8}deg) rotateX(${offsetY * 8}deg) scale3d(1, 1, 1)`;
+      });
+    }
+  }
+
+  // Initialize effects when the component mounts
+  onMount(() => {
+    setupIntersectionObserver();
+    setupImageTiltEffect();
+  });
+
+
+
+
+
 </script>
 
 <main class="flex flex-col flex-1 p-4">
@@ -53,8 +111,9 @@ import Step from "./Step.svelte";
     id="introPage"
     class="fade-section grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"
   >
-    <div class="rounded-full relative shadow-2xl grid place-items-center">
+    <div id="tilt" class="rounded-full relative shadow-2xl grid place-items-center">
       <img
+      
         src={"/assets/profile-pic (4).png"}
         alt="Riteek Rakesh"
         class="animate-bounce-y object-cover z-[2] max-h-[70vh]"
