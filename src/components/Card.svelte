@@ -10,8 +10,8 @@
     <div class={`card ${classname}`}>
       <a href={href}>
         <div class="card--display">
-          <i class={iconname}/>
-          <h2 class="font-semibold text-2xl">{title}</h2>
+          <i class="{iconname} text-[#ffc2c2]"/>
+          <h2 class="font-bolder text-2xl">{title}</h2>
         </div>
         <div class="card--hover">
           <!-- <h2>{title}</h2> -->
