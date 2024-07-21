@@ -51,7 +51,7 @@ import Step from "./Step.svelte";
 <main class="flex flex-col flex-1 p-4">
   <section
     id="introPage"
-    class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"
+    class="fade-section grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"
   >
     <div class="rounded-full relative shadow-2xl grid place-items-center">
       <img
@@ -62,16 +62,17 @@ import Step from "./Step.svelte";
     </div>
 
     <div
+    id="intro"
       class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"
     >
-      <h1 class="text-violet-200 font-semibold text-3xl sm:text-4xl md:text-5xl">
-        Hi! I'm <span class="Rubik Mono One text-violet-500">Riteek</span>
+      <h1 class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl">
+        Hi! I'm <span class="text-violet-500">Riteek</span>
         Rakesh,
         <br />Full Stack
-        <span class="Rubik Mono One text-violet-500">Developer</span>
+        <span class="text-violet-500">Developer</span>
       </h1>
       <p class=" text-[#bcbaf7] text-base  sm:text-lg md:text-xl">
-        I'm a 22 year old <span class="text-[#ffffff]">software engineer</span> specializing in creating scalable REST APIs, project leadership, database optimization, UX enhancement, and innovative solutions.
+        I'm a 22 year old <span class="text-[#ffffff] font-semibold">software engineer</span> specializing in creating scalable REST APIs, project leadership, database optimization, UX enhancement, and innovative solutions.
       </p>
       <button
                 id="linkedinButton"

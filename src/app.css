@@ -3,79 +3,160 @@
 @tailwind utilities;
 
 @layer utilities {
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOutAnimation {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .fade-in {
+    animation: fadeInAnimation 1s forwards;
+  }
+
+  .fade-out {
+    animation: fadeOutAnimation 1s forwards;
+  }
+
   @keyframes bounce-y {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
   }
 
   .animate-bounce-y {
-      animation: bounce-y 3s ease-in-out infinite;
+    animation: bounce-y 3s ease-in-out infinite;
   }
 }
 
 html {
-    scroll-behavior: smooth;
-    /* cursor: none; */
-    /* cursor: crosshair */
+  scroll-behavior: smooth;
+  /* cursor: none; */
+  /* cursor: crosshair */
 }
+
 #circularcursor {
   background-color: transparent;
-  border:1px solid rgb(255, 255, 255);    
-  height:20px;
-  width:20px;
-  border-radius:50%;
-  -moz-border-radius:50%;
-  -webkit-border-radius:50%;
+  border: 1px solid rgb(255, 255, 255);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   position: absolute;
   z-index: 100;
 }
+
 body {
-    font-family: 'Courier Prime', monospace;
-  }
-h1 {
-font-size: xx-large;
-font-family: 'Rubik Mono One', sans-serif;
+  font-family: "Michroma", monospace;
 }
+
+#intro h1 {
+  /* font-size: xxx-large; */
+  font-family: "Righteous", sans-serif;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+#intro p {
+  /* animation-duration: 1s;
+  animation-name: slidein */
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 #particles-js {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #000; /* Change to your desired background color */
+  background-color: #000;
+  /* Change to your desired background color */
   /* z-index: -1 */
   background-repeat: repeat
 }
 
-    
+
 /* Example for the blueShadow effect */
 .blueShadow {
-    position: relative;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .blueShadow::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    box-shadow: inset 0 0 10px rgba(0, 0, 255, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .blueShadow:hover::after {
-    opacity: 1;
-  }
-  
-  /* Ensure group-hover is correctly applied */
-  .group:hover .group-hover\:translate-x-full {
-    transform: translateX(100%);
-  }
-  
-  /* General styling for Header */
-  header {
-    transition: all 0.2s;
-  }
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  
+.blueShadow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: inset 0 0 10px rgba(0, 0, 255, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.blueShadow:hover::after {
+  opacity: 1;
+}
+
+/* Ensure group-hover is correctly applied */
+.group:hover .group-hover\:translate-x-full {
+  transform: translateX(100%);
+}
+
+/* General styling for Header */
+header {
+  transition: all 0.2s;
+}

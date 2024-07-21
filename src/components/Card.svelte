@@ -44,6 +44,11 @@
       font-weight: bold;
       position: relative;
       width: 100%;
+      
+    }
+    .card h2{
+      font-family: "Michroma", sans-serif;
+      color: cadetblue;
     }
   
     .card a {
