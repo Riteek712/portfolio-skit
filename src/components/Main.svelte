@@ -172,6 +172,46 @@ import Step from "./Step.svelte";
         <i class="fa-regular fa-circle-play" />
         <p>Watch the video</p>
     </a>
+
+    
+    <div class="flex flex-col items-center gap-16 w-full">
+      <h1 class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl font-righteous">
+        My <span class="text-violet-500">Work</span>
+        journey.. 
+      </h1>
+      <div  class="w-4/5">
+      
+      <Step 
+        company="Timechain Labs" 
+        role="Software Developer Intern" 
+        icon="fa fa-code" 
+        description="10/2023 - Present, Remote">
+        <ul class="list-disc list-inside text-justify gap-6">
+            <li>Led & contributed to the development of backend REST APIs across multiple projects using Nest.js, Node.js, Express.JS, GoLang, Gin, gorm, Typescript, Prisma ORM, PostgreSQL, & AWS ensuring efficient and scalable solutions.</li>
+            <br/>
+            <li>Integrated Stripe payment intent for the subscription model. Collaborated with others on Cashfree UPI payment integration. Assisted in the integration of AWS KMS & use of asymmetric keys for digital signing & encryption-decryption of sensitive data.</li>
+            <br/>
+            <li>Streamlined backend API deployments using Docker containers on AWS EC2, achieving faster deployments, improved resource utilization, increased scalability.</li>
+            <br/>
+            <li>Guided other interns with their tasks and reviewed their pull requests.</li>
+        </ul>
+    </Step>
+      <Step 
+        company="Timechain Summer of Code 2023" 
+        role="Project Lead: Ultraforms" 
+        icon="fa fa-code" 
+        description="05/2023 - 09/2023, Remote">
+        <ul class="list-disc list-inside text-justify">
+          <li>Led Ultraform project development and authored the comprehensive White Paper, outlining vision, architecture, and technical specifications.</li>
+          <br/>
+          <li>Designed user-friendly wireframes and composed backend API, tested with industry-standard tools, and documented using Swagger. Utilized MongoDB, JavaScript, Node.js, Nest.js, and Swagger.</li>
+          <br/>
+          <li>I was recognized as a top contributor in the program, leading to an invitation to work closely with the organization's main team in Hyderabad.</li>
+      </ul>
+    </Step>
+  </div>
+    </div>
+
     <h1 class="mx-auto text-3xl underline decoration-double underline-offset-8">My <strong
       class="text-violet-400"
       >Projects</strong></h1>
