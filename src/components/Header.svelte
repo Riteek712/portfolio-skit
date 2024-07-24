@@ -6,12 +6,19 @@
       { name: 'About me', link: '#aboutme' },
       // { name: 'Github', link: 'https://github.com/Riteek712' },
     ];
+
+    function openCV() {
+    window.open(
+      "https://drive.google.com/file/d/1KuS8NWhAQqlQbr3ktgFkbj9DPeEvOET6/view?usp=sharing",
+      "_blank"
+    );
+  }
   </script>
   
   <header class={"sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border border-solid" + (y > 0 ? " py-4 bg-slate-950" : " py-6 bg-transparent border-transparent")}>
-    <h2 class="font-medium">
-      <b class="font-bold " style="font-family: 'Courier Prime', monospace;">Riteek</b> Rakesh
-    </h2>
+    <button on:click={openCV} id="cv-button" class="font-bold">
+      <b class="hover:underline underline-offset-8 " style="font-family: 'Rock Salt', cursive;">CV</b>
+    </button>
   
     <div class="sm:flex items-center gap-10 hidden">
       {#each tabs as tab, index}
