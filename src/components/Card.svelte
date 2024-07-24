@@ -10,7 +10,7 @@
     <div class={`card ${classname}`}>
       <a href={href}>
         <div class="card--display">
-          <i class="{iconname} text-[#ffc2c2]"/>
+          <i class="{iconname} text-violet-500"/>
           <h2 class="font-bolder text-2xl">{title}</h2>
         </div>
         <div class="card--hover">
