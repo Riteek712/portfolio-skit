@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
     export let classname = '';
     export let href = '';
     export let iconname = '';

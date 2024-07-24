@@ -3,6 +3,9 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
+      fontFamily: {
+        righteous: ['Righteous', 'sans-serif'],
+      },
       keyframes: {
         slowBounce: {
           '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
