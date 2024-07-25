@@ -65,8 +65,9 @@
   
     .card a:hover {
       transform: translate(-20px, -20px);
-      border-color: #5bc0eb;
+      border-color: #ffffff;
       background-color: #8b5cf6;
+      transition-duration: 900ms
     }
   
     .card a:hover .card--display {
