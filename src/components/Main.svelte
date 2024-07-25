@@ -8,26 +8,7 @@ import Step from "./Step.svelte";
       "_blank"
     );
   }
-  let steps = [
-        {
-            name: "E-commerse store API",
-            icon: "fa-solid fa-cart-shopping",
-            description:
-                "This is a full-fledged E-commerce API developed using the Nest.js framework and powered by a PostgreSQL database. The project aims to provide a robust and scalable backend solution for building eCommerce applications, complete with features for product management, user authentication, cart management, order processing, and more.",
-        },
-        {
-            name: "NFT Marketplace",
-            icon: "fa-solid fa-list-check",
-            description:
-                "This is an NFT (Non-Fungible Token) marketplace built on Ethereum's Sepolia testnet. The marketplace allows users to mint, buy, and sell NFTs securely using blockchain technology. It is built using Hardhat for Ethereum development, ethers.js for interacting with the Ethereum blockchain, React.js for the frontend, and Pinata IPFS for d-Storage.",
-        },
-        {
-            name: "Chat app",
-            icon: "fa-solid fa-diagram-project",
-            description:
-                "Users can join specific chat rooms to chat with each others. Integrated Socket.io library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates.",
-        },
-    ];
+  
 
     let benefits = [
         {
@@ -149,7 +130,7 @@ import Step from "./Step.svelte";
     </div>
   </section>
 
-  <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects">
+  <section class="py-20 lg:py-32 flex flex-col gap-24">
     <div class="flex flex-col gap-2 text-center align-middle">
         <h6 class="text-large sm:text-xl md:text-2xl">
             I have created tutorials on NestJS which has 2000+ views
@@ -174,7 +155,7 @@ import Step from "./Step.svelte";
     </a>
 
     
-    <div class="flex flex-col items-center gap-16 w-full">
+    <div id="WorkEX" class="flex flex-col items-center gap-16 w-full">
       <h1 class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl font-righteous">
         My <span class="text-violet-500">Work</span>
         journey.. 
@@ -212,37 +193,11 @@ import Step from "./Step.svelte";
   </div>
     </div>
 
-    <h1 class="mx-auto text-3xl underline decoration-double underline-offset-8">My <strong
+    <h1 id="projects" class="mx-auto text-3xl underline decoration-double underline-offset-8">My <strong
       class="text-violet-400"
       >Projects</strong></h1>
     
-    <!-- <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-        <Step step={steps[0]}>
-            <p>
-                This is a full-fledged E-commerce API developed using the <strong
-                class="text-violet-400"
-                >Nest.js</strong> framework and powered by a <strong
-                class="text-violet-400"
-                >PostgreSQL</strong> database. The project aims to provide a robust and scalable backend solution for building eCommerce applications, complete with features for product management, user authentication, cart management, order processing, and more.
-            </p>
-        </Step>
-        <Step step={steps[1]}>
-            <p>
-              
-                This is an NFT (Non-Fungible Token) marketplace built on <strong
-                class="text-violet-400">Ethereum</strong>'s Sepolia testnet. The marketplace allows users to mint, buy, and sell NFTs securely using blockchain technology. It is built using <strong
-                class="text-violet-400">Hardhat</strong> for Ethereum development, <strong
-                class="text-violet-400">ethers.js</strong> for interacting with the Ethereum blockchain, <strong
-                class="text-violet-400">React.js</strong> for the frontend, and integrated with <strong
-                class="text-violet-400">Pinata IPFS</strong> for d-Storage.
-            </p>
-        </Step>
-        <Step step={steps[2]}>
-            <p>
-                Users can join specific <strong class="text-violet-400">chat rooms</strong> to chat with each others built with the help of <strong class="text-violet-400">Node.js & Express.js</strong>. Integrated <strong class="text-violet-400">Socket.io</strong> library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates.
-            </p>
-        </Step>
-    </div> -->
+    
     <div class="flex flex-row flex-wrap">
       <Card 
       classname=""
