@@ -124,7 +124,7 @@ import Step from "./Step.svelte";
                 ></div>
                 
                 <h4 class="relative z-9">
-                    Get in touch &rarr;
+                    My LinkedIn &rarr;
                 </h4>
             </button>
     </div>
