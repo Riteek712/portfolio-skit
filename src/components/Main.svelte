@@ -193,25 +193,21 @@ import Step from "./Step.svelte";
   </div>
     </div>
 
+    <div class="project-section flex flex-col items-center">
     <h1 id="projects" class="mx-auto text-3xl underline decoration-double underline-offset-8">My <strong
       class="text-violet-400"
       >Projects</strong></h1>
     
     
     <div class="flex flex-row flex-wrap">
-      <Card 
-      classname=""
-      href="https://github.com/Riteek712/chat-app-in-Node.js"
-      iconname="fa-solid fa-diagram-project"
-      title="Online Chat room"
-      description='Users can join specific to chat with each others built with the help of Node.js & Express.js. Integrated library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates.'
-/>    
+         
       <Card 
       classname=""
       href="https://github.com/Riteek712/chat-app-in-Node.js"
       iconname="fa-solid fa-tags"
       title="NFT Marketplace"
       description='This is an NFT (Non-Fungible Token) marketplace built on Sepolia testnet. The marketplace allows users to mint, buy, and sell NFTs securely using blockchain technology. It is built using Hardhat for Ethereum development,ethers.js for interacting with the Ethereum blockchain, React.js for the frontend, and integrated with Pinata IPFS for d-Storage'
+      tags={['JavaScript', 'Solidity', 'React', 'Tailwind CSS', 'Hardhat', 'Pinata IPFS']}
 />    
       <Card 
       classname=""
@@ -219,7 +215,36 @@ import Step from "./Step.svelte";
       iconname="fa-solid fa-cart-shopping"
       title="E-commerse store API"
       description='This is a full-fledged E-commerce API developed using the Nest.js framework and powered by a PostgreSQL database. The project aims to provide a robust and scalable backend solution for building eCommerce applications, complete with features for product management, user authentication, cart management, order processing, and more.'
-/>    
+      tags={['TypeScript', 'Node.js', 'PostgreSQL', 'NestJS', 'Jwt Auth']}
+/>   
+      <Card 
+      classname=""
+      href="https://github.com/Riteek712/LiveDocs"
+      iconname="fa-solid fa-file"
+      title="Live-Docs"
+      description='An improved Google Docs that manages millions of collaborators in real-time, used Clerk for authentication and Liveblocks for the collaborative text editor. Still in development'
+      tags={['TypeScript', 'Next.js', 'Tailwind CSS', 'Clerk-Auth', 'Liveblocks', 'React.js']}
+/>   
+<Card 
+classname=""
+href="https://github.com/Riteek712/chat-app-in-Node.js"
+iconname="fa-solid fa-diagram-project"
+title="Online Chat room"
+description='Users can join specific to chat with each others built with the help of Node.js & Express.js. Integrated library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates.'
+tags={['JavaScript', 'Node.js', 'Socket.io']}
+/>  
     </div>
+  </div>
 </section>
 </main>
+
+<style>
+  .project-section:hover h1{
+    align-content: center;
+    letter-spacing: 8px;
+        font-weight: 900;
+        text-decoration: underline orchid;
+        margin-bottom: 2em;
+
+  }
+</style>

@@ -5,7 +5,7 @@
     export let description: string = '';
 </script>
 
-<div class="container gap-16">
+<div class="container gap-16 mb-10">
 <div
     class="p-4 sm:p-6 md:p-8 flex flex-col mr-auto gap-4 rounded-lg border border-solid border-violet-700 text-center cursor-pointer group hover:border-violet-400 duration-200"
 >

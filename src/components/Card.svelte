@@ -1,17 +1,23 @@
-<script>
+<script lang="ts">
     export let classname = '';
     export let href = '';
     export let iconname = '';
     export let title = '';
     export let description = '';
+    export let tags: string[] =[];
   </script>
   
   <div class="card-container">
     <div class={`card ${classname}`}>
       <a href={href}>
         <div class="card--display">
-          <i class="{iconname} text-violet-500"/>
+          <i class="{iconname} text-violet-200"/>
           <h2 class="font-bolder text-2xl">{title}</h2>
+          <ul class="flex flex-wrap gap-2 mt-1 justify-center">
+            {#each tags as tag}
+              <li class="bg-gray-800 px-2 py-1 rounded">{tag}</li>
+            {/each}
+          </ul>
         </div>
         <div class="card--hover">
           <!-- <h2>{title}</h2> -->
@@ -48,7 +54,7 @@
     }
     .card h2{
       font-family: "Michroma", sans-serif;
-      color: cadetblue;
+      color:rgb(139 92 246 / var(--tw-text-opacity));
     }
   
     .card a {
@@ -64,7 +70,7 @@
     }
   
     .card a:hover {
-      transform: translate(-20px, -20px);
+      transform: translate(0, -20px);
       border-color: #ffffff;
       background-color: #8b5cf6;
       transition-duration: 900ms
