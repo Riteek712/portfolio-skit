@@ -193,6 +193,7 @@ import Step from "./Step.svelte";
   </div>
     </div>
 
+    <div class="project-section flex flex-col items-center">
     <h1 id="projects" class="mx-auto text-3xl underline decoration-double underline-offset-8">My <strong
       class="text-violet-400"
       >Projects</strong></h1>
@@ -233,5 +234,17 @@ description='Users can join specific to chat with each others built with the hel
 tags={['JavaScript', 'Node.js', 'Socket.io']}
 />  
     </div>
+  </div>
 </section>
 </main>
+
+<style>
+  .project-section:hover h1{
+    align-content: center;
+    letter-spacing: 8px;
+        font-weight: 900;
+        text-decoration: underline orchid;
+        margin-bottom: 2em;
+
+  }
+</style>
