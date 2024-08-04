@@ -44,6 +44,7 @@
     .card-container {
       flex: 1 1 300px;
       margin: 30px;
+      width: 80%;
     }
   
     .card {

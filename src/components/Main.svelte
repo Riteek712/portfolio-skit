@@ -226,6 +226,14 @@ import Step from "./Step.svelte";
       tags={['TypeScript', 'Next.js', 'Tailwind CSS', 'Clerk-Auth', 'Liveblocks', 'React.js']}
 />   
 <Card 
+classname="w-1/2"
+href="https://github.com/Riteek712/schoolManagementSystemMERN"
+iconname="fa-solid fa-diagram-project"
+title="School Management System"
+description='This repository contains the codebase for a School Management MERN (MongoDB, Express.js, React.js, Node.js) stack application. This application serves as a template for building full-stack web applications using the MERN stack.'
+tags={['JavaScript', 'Node.js', 'React.js', 'Express.js', 'MongoDB', 'Tailwind CSS']}
+/>  
+<Card 
 classname=""
 href="https://github.com/Riteek712/chat-app-in-Node.js"
 iconname="fa-solid fa-diagram-project"
