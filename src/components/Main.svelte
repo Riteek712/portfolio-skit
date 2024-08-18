@@ -174,10 +174,10 @@
 
     <div id="WorkEX" class="flex flex-col items-center gap-16 w-full">
       <h1
-        class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl font-righteous"
+        class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl  underline decoration-double underline-offset-8 font-righteous tracking-widest"
       >
         My <span class="text-violet-500">Work</span>
-        journey..
+        journey!
       </h1>
       <div class="w-4/5">
         <Step
@@ -245,7 +245,7 @@
     <div class="project-section flex flex-col items-center">
       <h1
         id="projects"
-        class="mx-auto text-3xl underline decoration-double underline-offset-8"
+        class="mx-auto font-semibold text-4xl sm:text-5xl md:text-6xl underline decoration-double underline-offset-8 font-righteous tracking-widest"
       >
         My <strong class="text-violet-400">Projects</strong>
       </h1>
@@ -318,11 +318,11 @@
 </main>
 
 <style>
-  .project-section:hover h1 {
+  .project-section h1 {
     align-content: center;
-    letter-spacing: 8px;
+    /* letter-spacing: 10px; */
     font-weight: 900;
-    text-decoration: underline orchid;
+    text-decoration: underline double whitesmoke;
     margin-bottom: 2em;
   }
 </style>
