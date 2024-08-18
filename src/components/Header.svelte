@@ -9,7 +9,7 @@
 
     function openCV() {
     window.open(
-      "https://drive.google.com/file/d/1KuS8NWhAQqlQbr3ktgFkbj9DPeEvOET6/view?usp=sharing",
+      "https://drive.google.com/file/d/1GbKDcsct3VaIgsn7dxkwW1lQWCzV1_Y2/view?usp=sharing",
       "_blank"
     );
   }
