@@ -38,5 +38,8 @@
         transition-duration: 600ms
 
     }
+    .container{
+        background: rgba(0, 0, 0, 0.8);
+    }
 
 </style>

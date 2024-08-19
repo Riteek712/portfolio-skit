@@ -62,7 +62,7 @@
       padding: 30px;
       width: 100%;
       border: 2px solid black;
-      background: transparent;
+      background: rgba(0, 0, 0, 0.822);
       border-radius: 20px;
       text-decoration: none;
       color: #ffffff;
