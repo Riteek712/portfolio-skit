@@ -182,9 +182,9 @@
       <div class="w-4/5">
         <Step
           company="Timechain Labs"
-          role="Software Developer Intern"
+          role="Software Developer"
           icon="fa fa-code"
-          description="10/2023 - Present, Remote"
+          description="06/2023 - Present, Remote"
         >
           <ul class="list-disc list-inside text-justify gap-6">
             <li>
@@ -195,21 +195,36 @@
             </li>
             <br />
             <li>
-              Integrated Stripe payment intent for the subscription model.
-              Collaborated with others on Cashfree UPI payment integration.
-              Assisted in the integration of AWS KMS & use of asymmetric keys
-              for digital signing & encryption-decryption of sensitive data.
+              Integrated PhonePe Payment gateway for seamless transactions.
             </li>
             <br />
             <li>
-              Streamlined backend API deployments using Docker containers on AWS
-              EC2, achieving faster deployments, improved resource utilization,
-              increased scalability.
+              Built a wrapper for better management of STAS-20 tokens. Implemented detailed event logging for transactions and actions taken within the wrapper, improving transparency and traceability.
+
             </li>
             <br />
             <li>
-              Guided other interns with their tasks and reviewed their pull
-              requests.
+              Implemented Google OAuth-based authentication for secure and streamlined user login processes.
+            </li>
+          </ul>
+        </Step>
+        <Step
+          company="Timechain Labs"
+          role="Software Developer Intern"
+          icon="fa fa-code"
+          description="10/2023 - 06/2024, Remote"
+        >
+          <ul class="list-disc list-inside text-justify gap-6">
+            <li>
+              Worked in support as a backend developer, building and maintaining APIs. Assisted in the integration of AWS KMS & use of asymmetric keys for digital signing & encryption-decryption of sensitive data
+            </li>
+            <br />
+            <li>
+              Constructed and updated more than 40 API endpoints, implementation ranging from transactional Database querris, pagination, authorization, CRUD endpoints, analytics endpoints, etc.
+            </li>
+            <br />
+            <li>
+              Streamlined backend API deployments using Docker containers onAWS EC2, achieving faster deployments, improved resource utilization, increased scalability.
             </li>
           </ul>
         </Step>
@@ -221,9 +236,7 @@
         >
           <ul class="list-disc list-inside text-justify">
             <li>
-              Led Ultraform project development and authored the comprehensive
-              White Paper, outlining vision, architecture, and technical
-              specifications.
+              Led a team of 6 members for Ultraform project. Designed user-friendly wireframes and composed backend API. Utilized MongoDB, JavaScript, Node.js, Nest.js, and Swagger
             </li>
             <br />
             <li>
@@ -233,9 +246,7 @@
             </li>
             <br />
             <li>
-              I was recognized as a top contributor in the program, leading to
-              an invitation to work closely with the organization's main team in
-              Hyderabad.
+              I was recognized as a top contributor to the program , leading to an invitation to work closely with the organization's main team.
             </li>
           </ul>
         </Step>
@@ -315,6 +326,14 @@
       </div>
     </div>
   </section>
+  <!-- <div>
+    <img
+    src={"/assets/345cbb1a2761b6036d5f50f00f534fa9.png"}
+    alt="Riteek Rakesh"
+    
+  />
+  </div> -->
+
 </main>
 
 <style>
