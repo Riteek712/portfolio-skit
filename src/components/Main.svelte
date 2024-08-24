@@ -52,6 +52,26 @@
     });
   }
 
+  function setupGlobalTiltEffect() {
+    const image = document.querySelector("#tilt") as HTMLElement | null;
+
+    if (image) {
+      window.addEventListener("mousemove", (event: MouseEvent) => {
+        const middleX = window.innerWidth / 2;
+        const middleY = window.innerHeight / 2;
+
+        const offsetX = (event.clientX - middleX) / middleX;
+        const offsetY = (middleY - event.clientY) / middleY;
+
+        image.style.transform = `perspective(1000px) rotateY(${offsetX * 14}deg) rotateX(${offsetY * 14}deg) scale3d(1, 1, 1)`;
+      });
+
+      window.addEventListener("mouseleave", () => {
+        image.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)`;
+      });
+    }
+  }
+
   // Image tilt effect
   function setupImageTiltEffect() {
     const image = document.querySelector("#tilt") as HTMLElement | null;
@@ -76,6 +96,7 @@
 
   // Initialize effects when the component mounts
   onMount(() => {
+    setupGlobalTiltEffect();
     setupIntersectionObserver();
     setupImageTiltEffect();
   });
