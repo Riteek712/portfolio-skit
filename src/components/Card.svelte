@@ -51,7 +51,8 @@
       font-weight: bold;
       position: relative;
       width: 100%;
-      
+      box-shadow: 0 10px 10px rgba(139, 92, 246, 0.25); 
+    
     }
     .card h2{
       font-family: "Michroma", sans-serif;
@@ -63,18 +64,20 @@
       width: 100%;
       border: 2px solid black;
       background: rgba(0, 0, 0, 0.822);
-      border-radius: 20px;
+      /* border-radius: 20px; */
       text-decoration: none;
       color: #ffffff;
       display: block;
       transition: 0.25s ease;
+      box-shadow: 0 10px 20px rgba(139, 92, 246, 0.5); 
     }
   
     .card a:hover {
       transform: translate(0, -20px);
       border-color: #ffffff;
       background-color: #8b5cf6;
-      transition-duration: 900ms
+      box-shadow: 0 15px 30px rgba(139, 92, 246, 0.75); 
+      transition-duration: 600ms
     }
   
     .card a:hover .card--display {
@@ -109,6 +112,7 @@
       display: none;
       text-align: left;
       border: 3px double #8b5cf6;
+
     }
   
     .card--hover h2 {
@@ -133,7 +137,7 @@
       left: 0;
       top: 0;
       border: 3px double #8b5cf6;
-      border-radius: 20px;
+      /* border-radius: 20px; */
       z-index: -1;
     }
   
@@ -141,6 +145,7 @@
       color: white;
       background-color: black;
       border-color: black;
+      /* border-radius: 20px; */
     }
   
     .card--dark .card--hover .link {
