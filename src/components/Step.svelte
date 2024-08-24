@@ -40,6 +40,10 @@
     }
     .container{
         background: rgba(0, 0, 0, 0.8);
+        box-shadow: 0px 0px 20px indigo
+    }
+    .container:hover{
+        box-shadow: 0px 0px 80px indigo
     }
 
 </style>
