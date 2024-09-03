@@ -107,16 +107,16 @@
     id="introPage"
     class="fade-section grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"
   >
-    <div
-      id="tilt"
-      class="rounded-full relative shadow-2xl grid place-items-center"
-    >
-      <img
-        src={"/assets/profile-pic (4).png"}
+  <div
+    id="tilt"
+    class="rounded-full relative shadow-2xl grid place-items-center"
+>
+    <img
+        src="/assets/profile-pic (4).png"
         alt="Riteek Rakesh"
-        class="animate-bounce-y object-cover z-[2] max-h-[70vh]"
-      />
-    </div>
+        class="object-cover z-[2] max-h-[70vh] hidden md:block animate-bounce-y"
+    />
+</div>
 
     <div
       id="intro"
@@ -133,8 +133,7 @@
       <p class=" text-[#bcbaf7] text-base sm:text-lg md:text-xl">
         I'm a 22 year old <span class="text-[#ffffff] font-semibold"
           >software engineer</span
-        > specializing in creating scalable REST APIs, project leadership, database
-        optimization, UX enhancement, and innovative solutions.
+        >, delivering Code that scales, projects that lead, and solutions that innovate.
       </p>
       <button
         id="linkedinButton"
