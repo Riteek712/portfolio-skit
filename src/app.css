@@ -114,10 +114,12 @@ body {
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
+    transition: opacity 0.5s ease-in-out 0.3s;
   }
 
   100% {
     opacity: 1;
+    transition: opacity 0.5s ease-in-out 0.3s;
   }
 }
 
