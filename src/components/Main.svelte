@@ -32,7 +32,7 @@
   function setupIntersectionObserver() {
     const sections = document.querySelectorAll<HTMLElement>(".fade-section");
     const options = {
-      threshold: 0.5,
+      threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries) => {
