@@ -32,7 +32,7 @@
   function setupIntersectionObserver() {
     const sections = document.querySelectorAll<HTMLElement>(".fade-section");
     const options = {
-      threshold: 0.1,
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -150,7 +150,7 @@
   </section>
 
   <section class="py-20 lg:py-32 flex flex-col gap-24">
-    <div class="flex flex-col gap-2 text-center align-middle">
+    <div class="fade-section flex flex-col gap-2 text-center align-middle">
       <h6 class="text-large sm:text-xl md:text-2xl">
         I have created tutorials on NestJS which has 2000+ views
       </h6>
@@ -192,7 +192,7 @@
       <p>Watch the video</p>
     </a>
 
-    <div id="WorkEX" class="flex flex-col items-center gap-16 w-full">
+    <div id="WorkEX" class="fade-section flex flex-col items-center gap-16 w-full">
       <h1
         class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl  underline decoration-double underline-offset-8 font-righteous tracking-widest"
       >
@@ -273,7 +273,7 @@
       </div>
     </div>
 
-    <div class="project-section flex flex-col items-center">
+    <div class="fade-section project-section flex flex-col items-center">
       <h1
         id="projects"
         class="mx-auto font-semibold text-4xl sm:text-5xl md:text-6xl underline decoration-double underline-offset-8 font-righteous tracking-widest"
