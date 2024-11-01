@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
+  import { derived, writable } from "svelte/store";
   import Card from "./Card.svelte";
   import Step from "./Step.svelte";
   function openLinkedIn() {
@@ -8,6 +9,29 @@
       "_blank"
     );
   }
+
+  function typeWriter(text: string, speed = 100) {
+    const idx = writable(0);
+    const chars = text.split("");
+
+    const interval = setInterval(() => {
+      idx.update(n => (n < chars.length ? n + 1 : n));
+    }, speed);
+
+    onDestroy(() => clearInterval(interval));
+
+    // Return the index writable so we can use it in a derived store at the top level
+    return idx;
+  }
+
+  // Use typeWriter function to get the index writable for each text
+  const nameIdx = typeWriter("Hi! I'm Riteek Rakesh.", 100);
+
+  // Create a derived store at the top level for the progressively typed text
+  const typingText = derived(nameIdx, $nameIdx => 
+    "Hi! I'm Riteek Rakesh, Full Stack Developer".slice(0, $nameIdx)
+  );
+
 
   let benefits = [
     {
@@ -101,6 +125,39 @@
     setupImageTiltEffect();
   });
 </script>
+<style>
+  .heading {
+    font-size: 2rem;
+    line-height: 1;
+    word-break: break-word; /* This will wrap words to the next line if they’re too long */
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .highlight {
+    color: #7c3aed; /* violet color */
+    font-weight: bold;
+  }
+
+  #intro h1{
+  font-size: 5rem;
+}
+
+  .project-section h1 {
+    align-content: center;
+    /* letter-spacing: 10px; */
+    font-weight: 900;
+    text-decoration: underline double whitesmoke;
+    margin-bottom: 2em;
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 600px) {
+    .heading {
+      font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
+    }
+  }
+</style>
 
 <main class="flex flex-col flex-1 p-4">
   <section
@@ -120,77 +177,23 @@
 
     <div
       id="intro"
-      class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"
+      class="flex flex-col lg:justify-center text-left lg:text-left gap-6 md:gap-8 lg:gap-10"
     >
-      <h1
-        class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl"
-      >
-        Hi! I'm <span class="text-violet-500">Riteek</span>
-        Rakesh,
-        <br />Full Stack
-        <span class="text-violet-500">Developer</span>
-      </h1>
+    <h1 class="heading text-violet-200 font-semibold">
+      {$typingText}
+    </h1>
+    
       <p class=" text-[#bcbaf7] text-base sm:text-lg md:text-xl">
-        I'm a 22 year old <span class="text-[#ffffff] font-semibold"
+        A 22 year old <span class="text-[#ffffff] font-semibold"
           >software engineer</span
         >, delivering Code that scales, projects that lead, and solutions that innovate.
       </p>
-      <button
-        id="linkedinButton"
-        on:click={openLinkedIn}
-        class="ease-in-out duration-300 hover:bg-violet-900 hover:text-violet-100 blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950"
-      >
-        <div
-          class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
-        ></div>
-
-        <h4 class="relative z-9">My LinkedIn &rarr;</h4>
-      </button>
+      
     </div>
   </section>
 
   <section class="py-20 lg:py-32 flex flex-col gap-24">
-    <div class="fade-section flex flex-col gap-2 text-center align-middle">
-      <h6 class="text-large sm:text-xl md:text-2xl">
-        I have created tutorials on NestJS which has 2000+ views
-      </h6>
-      <h3 class="font-semibold text-3xl sm:text-4xl md:text-4xl">
-        Curious to <span class="Courier+Prime text-violet-400">see</span> my work?
-      </h3>
-      <div class="pt-6 flex flex-row gap-2 flex-wrap">
-        <iframe
-          class="mx-auto"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/eZMrNXa2nCo?si=uOyMCr0dWwW6sXA3"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          class="mx-auto"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/x_4fQPKXDyI?si=rd7i5UKc-ZSEORW8"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-
-    <a
-      href="https://youtu.be/eZMrNXa2nCo?si=rjIEeUT4sZFAXFO4"
-      target="_blank"
-      class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-violet-700 duration-200"
-    >
-      <i class="fa-regular fa-circle-play" />
-      <p>Watch the video</p>
-    </a>
+    
 
     <div id="WorkEX" class="fade-section flex flex-col items-center gap-16 w-full">
       <h1
@@ -280,30 +283,16 @@
       >
         My <strong class="text-violet-400">Projects</strong>
       </h1>
-
-      <div class="flex flex-row flex-wrap">
-        <Card
-          classname=""
-          href="https://github.com/Riteek712/chat-app-in-Node.js"
-          iconname="fa-solid fa-tags"
-          title="NFT Marketplace"
-          description="This is an NFT (Non-Fungible Token) marketplace built on Sepolia testnet. The marketplace allows users to mint, buy, and sell NFTs securely using blockchain technology. It is built using Hardhat for Ethereum development,ethers.js for interacting with the Ethereum blockchain, React.js for the frontend, and integrated with Pinata IPFS for d-Storage"
-          tags={[
-            "JavaScript",
-            "Solidity",
-            "React",
-            "Tailwind CSS",
-            "Hardhat",
-            "Pinata IPFS",
-          ]}
-        />
+    
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full p-4">
+        
         <Card
           classname=""
           href="https://github.com/Riteek712/chat-app-in-Node.js"
           iconname="fa-solid fa-cart-shopping"
-          title="E-commerse store API"
+          title="E-commerce Store API"
           description="This is a full-fledged E-commerce API developed using the Nest.js framework and powered by a PostgreSQL database. The project aims to provide a robust and scalable backend solution for building eCommerce applications, complete with features for product management, user authentication, cart management, order processing, and more."
-          tags={["TypeScript", "Node.js", "PostgreSQL", "NestJS", "Jwt Auth"]}
+          tags={["TypeScript", "Node.js", "PostgreSQL", "NestJS", "Jwt Auth", "ORMs"]}
         />
         <Card
           classname=""
@@ -321,7 +310,22 @@
           ]}
         />
         <Card
-          classname="w-"
+          classname=""
+          href="https://github.com/Riteek712/chat-app-in-Node.js"
+          iconname="fa-solid fa-tags"
+          title="NFT Marketplace"
+          description="This is an NFT (Non-Fungible Token) marketplace built on Sepolia testnet. The marketplace allows users to mint, buy, and sell NFTs securely using blockchain technology. It is built using Hardhat for Ethereum development, ethers.js for interacting with the Ethereum blockchain, React.js for the frontend, and integrated with Pinata IPFS for d-Storage"
+          tags={[
+            "JavaScript",
+            "Solidity",
+            "React",
+            "Tailwind CSS",
+            "Hardhat",
+            "Pinata IPFS",
+          ]}
+        />
+        <Card
+          classname=""
           href="https://github.com/Riteek712/schoolManagementSystemMERN"
           iconname="fa-solid fa-diagram-project"
           title="School Management System"
@@ -335,16 +339,58 @@
             "Tailwind CSS",
           ]}
         />
-        <Card
+        <!-- <Card
           classname=""
           href="https://github.com/Riteek712/chat-app-in-Node.js"
           iconname="fa-solid fa-diagram-project"
-          title="Online Chat room"
-          description="Users can join specific to chat with each others built with the help of Node.js & Express.js. Integrated library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates."
+          title="Online Chat Room"
+          description="Users can join specific chat rooms to communicate with each other built with the help of Node.js & Express.js. Integrated library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates."
           tags={["JavaScript", "Node.js", "Socket.io"]}
-        />
+        /> -->
       </div>
     </div>
+    
+    <div class="fade-section flex flex-col gap-2 text-center align-middle">
+      <h6 class="text-large sm:text-xl md:text-2xl">
+        I have created tutorials on NestJS which has 2000+ views
+      </h6>
+      <h3 class="font-semibold text-3xl sm:text-4xl md:text-4xl">
+        Curious to <span class="Courier+Prime text-violet-400">see</span> my work?
+      </h3>
+      <div class="pt-6 flex flex-row gap-2 flex-wrap">
+        <iframe
+          class="mx-auto"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/eZMrNXa2nCo?si=uOyMCr0dWwW6sXA3"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="mx-auto"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/x_4fQPKXDyI?si=rd7i5UKc-ZSEORW8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <a
+      href="https://youtu.be/eZMrNXa2nCo?si=rjIEeUT4sZFAXFO4"
+      target="_blank"
+      class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-violet-700 duration-200"
+    >
+      <i class="fa-regular fa-circle-play" />
+      <p>Watch the video</p>
+    </a>
   </section>
   <!-- <div>
     <img
@@ -356,12 +402,3 @@
 
 </main>
 
-<style>
-  .project-section h1 {
-    align-content: center;
-    /* letter-spacing: 10px; */
-    font-weight: 900;
-    text-decoration: underline double whitesmoke;
-    margin-bottom: 2em;
-  }
-</style>
