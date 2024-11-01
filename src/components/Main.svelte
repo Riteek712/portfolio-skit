@@ -192,7 +192,10 @@
     </div>
   </section>
 
-  <section class="py-20 lg:py-32 flex flex-col gap-24">
+  <section class="py-20 lg:py-32 flex flex-col items-center gap-24">
+    <h3 class="font-semibold align-middle text-3xl sm:text-4xl md:text-4xl">
+      Curious to <span class="Courier+Prime text-violet-400">see</span> my work?
+    </h3>
     
 
     <div id="WorkEX" class="fade-section flex flex-col items-center gap-16 w-full">
@@ -279,16 +282,16 @@
     <div class="fade-section project-section flex flex-col items-center">
       <h1
         id="projects"
-        class="mx-auto font-semibold text-4xl sm:text-5xl md:text-6xl underline decoration-double underline-offset-8 font-righteous tracking-widest"
+        class="mx-auto text-center font-semibold text-4xl sm:text-5xl md:text-6xl underline decoration-double underline-offset-8 font-righteous tracking-widest"
       >
         My <strong class="text-violet-400">Projects</strong>
       </h1>
     
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full p-4">
+      <div class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full p-4">
         
         <Card
           classname=""
-          href="https://github.com/Riteek712/chat-app-in-Node.js"
+          href="https://github.com/Riteek712/Ecommerce-API"
           iconname="fa-solid fa-cart-shopping"
           title="E-commerce Store API"
           description="This is a full-fledged E-commerce API developed using the Nest.js framework and powered by a PostgreSQL database. The project aims to provide a robust and scalable backend solution for building eCommerce applications, complete with features for product management, user authentication, cart management, order processing, and more."
@@ -311,7 +314,7 @@
         />
         <Card
           classname=""
-          href="https://github.com/Riteek712/chat-app-in-Node.js"
+          href="https://github.com/Riteek712/NFT-Marketplace"
           iconname="fa-solid fa-tags"
           title="NFT Marketplace"
           description="This is an NFT (Non-Fungible Token) marketplace built on Sepolia testnet. The marketplace allows users to mint, buy, and sell NFTs securely using blockchain technology. It is built using Hardhat for Ethereum development, ethers.js for interacting with the Ethereum blockchain, React.js for the frontend, and integrated with Pinata IPFS for d-Storage"
@@ -354,9 +357,7 @@
       <h6 class="text-large sm:text-xl md:text-2xl">
         I have created tutorials on NestJS which has 2000+ views
       </h6>
-      <h3 class="font-semibold text-3xl sm:text-4xl md:text-4xl">
-        Curious to <span class="Courier+Prime text-violet-400">see</span> my work?
-      </h3>
+      
       <div class="pt-6 flex flex-row gap-2 flex-wrap">
         <iframe
           class="mx-auto"
