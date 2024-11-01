@@ -151,6 +151,13 @@
     margin-bottom: 2em;
   }
 
+  Card {
+    justify-self: center;
+  }
+  .grid {
+  justify-items: center; /* Center the items in the grid */
+}
+
   /* Media query for smaller screens */
   @media (max-width: 600px) {
     .heading {
@@ -279,7 +286,22 @@
       </div>
     </div>
 
-    <div class="fade-section project-section flex flex-col items-center">
+    <div class="flex flex-col gap-2 text-center align-middle">
+      <h3 class="text-large sm:text-xl md:text-2xl">
+          I have created tutorials on NestJS which has 3000+ views
+      </h3>
+      <div class="pt-6 flex flex-row gap-2 flex-wrap justify-center">
+          <div class="relative w-full sm:w-1/2 lg:w-1/3" style="padding-top: 56.25%;">
+              <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/eZMrNXa2nCo?si=uOyMCr0dWwW6sXA3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="relative w-full sm:w-1/2 lg:w-1/3" style="padding-top: 56.25%;">
+              <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/x_4fQPKXDyI?si=rd7i5UKc-ZSEORW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+      </div>
+  </div>
+  
+
+    <div class="fade-section project-section flex flex-col items-center w-full">
       <h1
         id="projects"
         class="mx-auto text-center font-semibold text-4xl sm:text-5xl md:text-6xl underline decoration-double underline-offset-8 font-righteous tracking-widest"
@@ -287,9 +309,10 @@
         My <strong class="text-violet-400">Projects</strong>
       </h1>
     
-      <div class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full p-4">
+      <div class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full p-a ">
         
         <Card
+          
           classname=""
           href="https://github.com/Riteek712/Ecommerce-API"
           iconname="fa-solid fa-cart-shopping"
@@ -313,20 +336,13 @@
           ]}
         />
         <Card
-          classname=""
-          href="https://github.com/Riteek712/NFT-Marketplace"
-          iconname="fa-solid fa-tags"
-          title="NFT Marketplace"
-          description="This is an NFT (Non-Fungible Token) marketplace built on Sepolia testnet. The marketplace allows users to mint, buy, and sell NFTs securely using blockchain technology. It is built using Hardhat for Ethereum development, ethers.js for interacting with the Ethereum blockchain, React.js for the frontend, and integrated with Pinata IPFS for d-Storage"
-          tags={[
-            "JavaScript",
-            "Solidity",
-            "React",
-            "Tailwind CSS",
-            "Hardhat",
-            "Pinata IPFS",
-          ]}
-        />
+  classname=""
+  href="https://github.com/Riteek712/NFT-Marketplace"
+  iconname="fa-solid fa-tags"
+  title="NFT Marketplace"
+  description="This is an NFT (Non-Fungible Token) marketplace built on Sepolia testnet. The marketplace allows users to mint, buy, and sell NFTs securely using blockchain technology. It is built using Hardhat for contract management and includes a user-friendly interface."
+  tags={["Solidity", "React.js", "Web3", "Hardhat", "Sepolia", "NFTs"]}
+/>
         <Card
           classname=""
           href="https://github.com/Riteek712/schoolManagementSystemMERN"
@@ -342,64 +358,29 @@
             "Tailwind CSS",
           ]}
         />
-        <!-- <Card
+        <Card
           classname=""
           href="https://github.com/Riteek712/chat-app-in-Node.js"
-          iconname="fa-solid fa-diagram-project"
+          iconname="fa-solid fa-comments-o"
           title="Online Chat Room"
           description="Users can join specific chat rooms to communicate with each other built with the help of Node.js & Express.js. Integrated library to facilitate real-time bidirectional communication between clients and server, allowing for instant message delivery and updates."
           tags={["JavaScript", "Node.js", "Socket.io"]}
-        /> -->
+        />
+        <Card
+          classname=""
+          href="https://github.com/Riteek712/url-shortner-FastAPI"
+          iconname="fa-solid fa-link"
+          title="Url shortner API"
+          description="This project implements a simple URL shortener service using FastAPI. The service allows users to shorten URLs, create custom slugs, and set expiration dates for the shortened URLs. It also provides analytics for tracking the number of clicks on the shortened URLs."
+          tags={["Python3", "FastAPI", "Swagger.io", "PostgreSQL", "Redis"]}
+        />
       </div>
     </div>
+    <h3 class="text-large sm:text-xl md:text-2xl">
+      Checkout my github for my other projects!!!
+  </h3>
     
-    <div class="fade-section flex flex-col gap-2 text-center align-middle">
-      <h6 class="text-large sm:text-xl md:text-2xl">
-        I have created tutorials on NestJS which has 2000+ views
-      </h6>
-      
-      <div class="pt-6 flex flex-row gap-2 flex-wrap">
-        <iframe
-          class="mx-auto"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/eZMrNXa2nCo?si=uOyMCr0dWwW6sXA3"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          class="mx-auto"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/x_4fQPKXDyI?si=rd7i5UKc-ZSEORW8"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-
-    <a
-      href="https://youtu.be/eZMrNXa2nCo?si=rjIEeUT4sZFAXFO4"
-      target="_blank"
-      class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-violet-700 duration-200"
-    >
-      <i class="fa-regular fa-circle-play" />
-      <p>Watch the video</p>
-    </a>
+    
   </section>
-  <!-- <div>
-    <img
-    src={"/assets/345cbb1a2761b6036d5f50f00f534fa9.png"}
-    alt="Riteek Rakesh"
-    
-  />
-  </div> -->
-
 </main>
 
