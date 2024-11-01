@@ -15,7 +15,7 @@
     const chars = text.split("");
 
     const interval = setInterval(() => {
-      idx.update(n => (n < chars.length ? n + 1 : n));
+      idx.update((n) => (n < chars.length ? n + 1 : n));
     }, speed);
 
     onDestroy(() => clearInterval(interval));
@@ -28,10 +28,9 @@
   const nameIdx = typeWriter("Hi! I'm Riteek Rakesh.", 100);
 
   // Create a derived store at the top level for the progressively typed text
-  const typingText = derived(nameIdx, $nameIdx => 
+  const typingText = derived(nameIdx, ($nameIdx) =>
     "Hi! I'm Riteek Rakesh, Full Stack Developer".slice(0, $nameIdx)
   );
-
 
   let benefits = [
     {
@@ -125,77 +124,37 @@
     setupImageTiltEffect();
   });
 </script>
-<style>
-  .heading {
-    font-size: 2rem;
-    line-height: 1;
-    word-break: break-word; /* This will wrap words to the next line if they’re too long */
-    text-align: left;
-    max-width: 100%;
-  }
-
-  .highlight {
-    color: #7c3aed; /* violet color */
-    font-weight: bold;
-  }
-
-  #intro h1{
-  font-size: 5rem;
-}
-
-  .project-section h1 {
-    align-content: center;
-    /* letter-spacing: 10px; */
-    font-weight: 900;
-    text-decoration: underline double whitesmoke;
-    margin-bottom: 2em;
-  }
-
-  Card {
-    justify-self: center;
-  }
-  .grid {
-  justify-items: center; /* Center the items in the grid */
-}
-
-  /* Media query for smaller screens */
-  @media (max-width: 600px) {
-    .heading {
-      font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
-    }
-  }
-</style>
 
 <main class="flex flex-col flex-1 p-4">
   <section
     id="introPage"
     class="fade-section grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"
   >
-  <div
-    id="tilt"
-    class="rounded-full relative shadow-2xl grid place-items-center"
->
-    <img
+    <div
+      id="tilt"
+      class="rounded-full relative shadow-2xl grid place-items-center"
+    >
+      <img
         src="/assets/profile-pic (4).png"
         alt="Riteek Rakesh"
         class="object-cover z-[2] max-h-[70vh] hidden md:block animate-bounce-y"
-    />
-</div>
+      />
+    </div>
 
     <div
       id="intro"
       class="flex flex-col lg:justify-center text-left lg:text-left gap-6 md:gap-8 lg:gap-10"
     >
-    <h1 class="heading text-violet-200 font-semibold">
-      {$typingText}
-    </h1>
-    
+      <h1 class="heading text-violet-200 font-semibold">
+        {$typingText}
+      </h1>
+
       <p class=" text-[#bcbaf7] text-base sm:text-lg md:text-xl">
         A 22 year old <span class="text-[#ffffff] font-semibold"
           >software engineer</span
-        >, delivering Code that scales, projects that lead, and solutions that innovate.
+        >, delivering Code that scales, projects that lead, and solutions that
+        innovate.
       </p>
-      
     </div>
   </section>
 
@@ -203,11 +162,13 @@
     <h3 class="font-semibold align-middle text-3xl sm:text-4xl md:text-4xl">
       Curious to <span class="Courier+Prime text-violet-400">see</span> my work?
     </h3>
-    
 
-    <div id="WorkEX" class="fade-section flex flex-col items-center gap-16 w-full">
+    <div
+      id="WorkEX"
+      class="fade-section flex flex-col items-center gap-16 w-full"
+    >
       <h1
-        class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl  underline decoration-double underline-offset-8 font-righteous tracking-widest"
+        class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl underline decoration-double underline-offset-8 font-righteous tracking-widest"
       >
         My <span class="text-violet-500">Work</span>
         journey!
@@ -232,12 +193,14 @@
             </li>
             <br />
             <li>
-              Built a wrapper for better management of STAS-20 tokens. Implemented detailed event logging for transactions and actions taken within the wrapper, improving transparency and traceability.
-
+              Built a wrapper for better management of STAS-20 tokens.
+              Implemented detailed event logging for transactions and actions
+              taken within the wrapper, improving transparency and traceability.
             </li>
             <br />
             <li>
-              Implemented Google OAuth-based authentication for secure and streamlined user login processes.
+              Implemented Google OAuth-based authentication for secure and
+              streamlined user login processes.
             </li>
           </ul>
         </Step>
@@ -249,15 +212,21 @@
         >
           <ul class="list-disc list-inside text-justify gap-6">
             <li>
-              Worked in support as a backend developer, building and maintaining APIs. Assisted in the integration of AWS KMS & use of asymmetric keys for digital signing & encryption-decryption of sensitive data
+              Worked in support as a backend developer, building and maintaining
+              APIs. Assisted in the integration of AWS KMS & use of asymmetric
+              keys for digital signing & encryption-decryption of sensitive data
             </li>
             <br />
             <li>
-              Constructed and updated more than 40 API endpoints, implementation ranging from transactional Database querris, pagination, authorization, CRUD endpoints, analytics endpoints, etc.
+              Constructed and updated more than 40 API endpoints, implementation
+              ranging from transactional Database querris, pagination,
+              authorization, CRUD endpoints, analytics endpoints, etc.
             </li>
             <br />
             <li>
-              Streamlined backend API deployments using Docker containers onAWS EC2, achieving faster deployments, improved resource utilization, increased scalability.
+              Streamlined backend API deployments using Docker containers onAWS
+              EC2, achieving faster deployments, improved resource utilization,
+              increased scalability.
             </li>
           </ul>
         </Step>
@@ -269,7 +238,9 @@
         >
           <ul class="list-disc list-inside text-justify">
             <li>
-              Led a team of 6 members for Ultraform project. Designed user-friendly wireframes and composed backend API. Utilized MongoDB, JavaScript, Node.js, Nest.js, and Swagger
+              Led a team of 6 members for Ultraform project. Designed
+              user-friendly wireframes and composed backend API. Utilized
+              MongoDB, JavaScript, Node.js, Nest.js, and Swagger
             </li>
             <br />
             <li>
@@ -279,7 +250,8 @@
             </li>
             <br />
             <li>
-              I was recognized as a top contributor to the program , leading to an invitation to work closely with the organization's main team.
+              I was recognized as a top contributor to the program , leading to
+              an invitation to work closely with the organization's main team.
             </li>
           </ul>
         </Step>
@@ -288,18 +260,39 @@
 
     <div class="flex flex-col gap-2 text-center align-middle">
       <h3 class="text-large sm:text-xl md:text-2xl">
-          I have created tutorials on NestJS which has 3000+ views
+        I have created tutorials on NestJS which have 3000+ views!
       </h3>
       <div class="pt-6 flex flex-row gap-2 flex-wrap justify-center">
-          <div class="relative w-full sm:w-1/2 lg:w-1/3" style="padding-top: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/eZMrNXa2nCo?si=uOyMCr0dWwW6sXA3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-          <div class="relative w-full sm:w-1/2 lg:w-1/3" style="padding-top: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/x_4fQPKXDyI?si=rd7i5UKc-ZSEORW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
+        <div
+          class="relative w-full "
+          style="padding-top: 56.25%;"
+        >
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/eZMrNXa2nCo?si=uOyMCr0dWwW6sXA3"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div
+          class="relative w-full "
+          style="padding-top: 56.25%;"
+        >
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/x_4fQPKXDyI?si=rd7i5UKc-ZSEORW8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
-  </div>
-  
+    </div>
 
     <div class="fade-section project-section flex flex-col items-center w-full">
       <h1
@@ -308,17 +301,24 @@
       >
         My <strong class="text-violet-400">Projects</strong>
       </h1>
-    
-      <div class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full p-a ">
-        
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full p-a"
+      >
         <Card
-          
           classname=""
           href="https://github.com/Riteek712/Ecommerce-API"
           iconname="fa-solid fa-cart-shopping"
           title="E-commerce Store API"
           description="This is a full-fledged E-commerce API developed using the Nest.js framework and powered by a PostgreSQL database. The project aims to provide a robust and scalable backend solution for building eCommerce applications, complete with features for product management, user authentication, cart management, order processing, and more."
-          tags={["TypeScript", "Node.js", "PostgreSQL", "NestJS", "Jwt Auth", "ORMs"]}
+          tags={[
+            "TypeScript",
+            "Node.js",
+            "PostgreSQL",
+            "NestJS",
+            "Jwt Auth",
+            "ORMs",
+          ]}
         />
         <Card
           classname=""
@@ -336,13 +336,13 @@
           ]}
         />
         <Card
-  classname=""
-  href="https://github.com/Riteek712/NFT-Marketplace"
-  iconname="fa-solid fa-tags"
-  title="NFT Marketplace"
-  description="This is an NFT (Non-Fungible Token) marketplace built on Sepolia testnet. The marketplace allows users to mint, buy, and sell NFTs securely using blockchain technology. It is built using Hardhat for contract management and includes a user-friendly interface."
-  tags={["Solidity", "React.js", "Web3", "Hardhat", "Sepolia", "NFTs"]}
-/>
+          classname=""
+          href="https://github.com/Riteek712/NFT-Marketplace"
+          iconname="fa-solid fa-tags"
+          title="NFT Marketplace"
+          description="This is an NFT (Non-Fungible Token) marketplace built on Sepolia testnet. The marketplace allows users to mint, buy, and sell NFTs securely using blockchain technology. It is built using Hardhat for contract management and includes a user-friendly interface."
+          tags={["Solidity", "React.js", "Web3", "Hardhat", "Sepolia", "NFTs"]}
+        />
         <Card
           classname=""
           href="https://github.com/Riteek712/schoolManagementSystemMERN"
@@ -378,9 +378,47 @@
     </div>
     <h3 class="text-large sm:text-xl md:text-2xl">
       Checkout my github for my other projects!!!
-  </h3>
-    
-    
+    </h3>
   </section>
 </main>
 
+<style>
+  .heading {
+    font-size: 2rem;
+    line-height: 1;
+    word-break: break-word; /* This will wrap words to the next line if they’re too long */
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .highlight {
+    color: #7c3aed; /* violet color */
+    font-weight: bold;
+  }
+
+  #intro h1 {
+    font-size: 5rem;
+  }
+
+  .project-section h1 {
+    align-content: center;
+    /* letter-spacing: 10px; */
+    font-weight: 900;
+    text-decoration: underline double whitesmoke;
+    margin-bottom: 2em;
+  }
+
+  Card {
+    justify-self: center;
+  }
+  .grid {
+    justify-items: center; /* Center the items in the grid */
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 600px) {
+    .heading {
+      font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
+    }
+  }
+</style>
