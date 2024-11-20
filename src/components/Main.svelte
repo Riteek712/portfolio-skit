@@ -178,7 +178,7 @@
           company="Timechain Labs"
           role="Software Developer"
           icon="fa fa-code"
-          description="06/2023 - Present, Remote"
+          description="06/2024 - Present, Remote"
         >
           <ul class="list-disc list-inside text-justify gap-6">
             <li>
