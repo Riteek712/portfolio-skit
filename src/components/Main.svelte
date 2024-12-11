@@ -166,12 +166,14 @@
     <div
       id="WorkEX"
       class="fade-section flex flex-col items-center gap-16 w-full"
+
     >
       <h1
-        class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl underline decoration-double underline-offset-8 font-righteous tracking-widest"
+        class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl underline-offset-8 tracking-wide mb-5 hover:underline decoration-double"
+        data-hover-tooltip="just the surface"
+        data-tooltip-position="top"
       >
-        My <span class="text-violet-500">Work</span>
-        journey!
+      <span class=" text-violet-400">dev</span> <span class=" text-[#FFAD60]">::</span> <span class="text-[#AA5486]">trail</span>
       </h1>
       <div class="w-4/5">
         <Step
@@ -297,9 +299,11 @@
     <div class="fade-section project-section flex flex-col items-center w-full">
       <h1
         id="projects"
-        class="mx-auto text-center font-semibold text-4xl sm:text-5xl md:text-6xl underline decoration-double underline-offset-8 font-righteous tracking-widest"
+        class='mx-auto text-center font-semibold text-4xl sm:text-5xl md:text-6xl tracking-wide underline-offset-8  hover:underline decoration-double'
+        data-hover-tooltip="many more on github"
+         data-tooltip-position="top"
       >
-        My <strong class="text-violet-400">Projects</strong>
+      <span class=" text-violet-400">project</span> <span class=" text-[#FFAD60]">::</span> <span class="text-[#AA5486]">forge</span>
       </h1>
 
       <div
@@ -404,8 +408,8 @@
     align-content: center;
     /* letter-spacing: 10px; */
     font-weight: 900;
-    text-decoration: underline double whitesmoke;
-    margin-bottom: 2em;
+    /* text-decoration: underline double whitesmoke; */
+    margin-bottom: 1em;
   }
 
   Card {

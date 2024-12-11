@@ -175,3 +175,69 @@ body {
 header {
   transition: all 0.2s;
 }
+/* Tooltip wrapper */
+[data-hover-tooltip] {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Tooltip text */
+[data-hover-tooltip]:hover::before {
+  content: attr(data-hover-tooltip);
+  position: absolute;
+  font-size: 14px;
+  background-color: #333; /* Dark background */
+  color: black;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-align: center;
+  background: #FFAD60;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+  white-space: nowrap;
+  width: max-content;
+}
+
+/* Top position */
+[data-hover-tooltip][data-tooltip-position="top"]:hover::before {
+  bottom: calc(100% + 15px); /* Tooltip above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Bottom position */
+[data-hover-tooltip][data-tooltip-position="bottom"]:hover::before {
+  top: calc(100% + 15px); /* Tooltip below the element */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Bounce effect for the element */
+[data-hover-tooltip]:hover {
+  animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
