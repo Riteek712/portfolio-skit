@@ -52,7 +52,7 @@
       font-weight: bold;
       position: relative;
       width: 100%;
-      box-shadow: 0 10px 10px rgba(139, 92, 246, 0.25);
+      /* box-shadow: 0 10px 10px rgba(139, 92, 246, 0.25); */
   }
 
   .card h2 {
@@ -69,7 +69,7 @@
       color: #ffffff;
       display: block;
       transition: 0.25s ease;
-      box-shadow: 0 10px 20px rgba(139, 92, 246, 0.5);
+      /* box-shadow: 0 10px 20px rgba(139, 92, 246, 0.5); */
   }
 
   .card section:hover {
@@ -122,8 +122,11 @@
   }
 
   .card--hover p.link a {
-      color: coral; /* Coral color for the link */
+      color: rgb(130, 1, 125); /* Coral color for the link */
       text-decoration: underline; /* Underline the link */
+      text-underline-offset: 8px;
+      letter-spacing: 0.2ch;
+
   }
 
   .card--border {
@@ -132,7 +135,7 @@
       height: 100%;
       left: 0;
       top: 0;
-      border: 3px double #8b5cf6;
+      /* border: 3px double #8b5cf6; */
       z-index: -1;
   }
 
