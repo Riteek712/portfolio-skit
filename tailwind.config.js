@@ -3,6 +3,9 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
+      colors: {
+        orchid: '#DA70D6', // Orchid color
+      },
       fontFamily: {
         righteous: ['Righteous', 'sans-serif'],
       },
