@@ -175,6 +175,24 @@ body {
 header {
   transition: all 0.2s;
 }
+
+@media (max-width: 768px) {
+  /* Apply hover effect styles on focus for small screens */
+  [data-hover-tooltip]:focus::before,
+  [data-hover-tooltip]:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  /* Adjust scale bounce effect */
+  [data-hover-tooltip]:focus,
+  [data-hover-tooltip]:hover {
+    animation: bounce 0.3s ease;
+  }
+}
+
+
 /* Tooltip wrapper */
 [data-hover-tooltip] {
   position: relative;

@@ -173,7 +173,7 @@
         data-hover-tooltip="just the surface"
         data-tooltip-position="top"
       >
-      <span class=" text-violet-400">dev</span> <span class=" text-[#FFAD60]">::</span> <span class="text-[#AA5486]">trail</span>
+      <span class=" text-violet-400">dev</span> <span class=" text-[#FFAD60]">:</span> <span class="text-orchid">trail</span>
       </h1>
       <div class="w-4/5">
         <Step
@@ -303,7 +303,7 @@
         data-hover-tooltip="many more on github"
          data-tooltip-position="top"
       >
-      <span class=" text-violet-400">project</span> <span class=" text-[#FFAD60]">::</span> <span class="text-[#AA5486]">forge</span>
+      <span class=" text-violet-400">project</span> <span class=" text-[#FFAD60]">:</span> <span class="text-orchid">forge</span>
       </h1>
 
       <div

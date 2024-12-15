@@ -38,10 +38,19 @@
         transition-duration: 600ms
 
     }
+    .container h3{
+        color: whitesmoke;
+        letter-spacing: 8px;
+        font-weight: 900;
+        text-decoration: underline orchid;
+        text-underline-offset: 8px;
+        transition-duration: 600ms
+
+    }
     .container{
         background: rgba(0, 0, 0, 0.8);
         border: 5px solid black;
-        box-shadow: 0px 0px 20px indigo;
+        /* box-shadow: 0px 0px 20px indigo; */
         
     }
     .container:hover{
