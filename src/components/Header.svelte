@@ -65,7 +65,7 @@
 
   <div class="social-icons items-center gap-10">
     {#each socialLinks as { icon, link, label }}
-      <a href={link} target="_blank" rel="noopener noreferrer" aria-label={label}>
+      <a href={link} target="_blank" rel="noopener noreferrer" aria-label={label} data-hover-tooltip={label} data-tooltip-position="bottom">
         <FontAwesomeIcon icon={icon} class="social-icon fa-xl" />
       </a>
     {/each}
