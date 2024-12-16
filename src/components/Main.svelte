@@ -260,41 +260,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col gap-2 text-center align-middle">
-      <h3 class="text-large sm:text-xl md:text-2xl">
-        I have created tutorials on NestJS which have 3000+ views!
-      </h3>
-      <div class="pt-6 flex flex-row gap-2 flex-wrap justify-center">
-        <div
-          class="relative w-full "
-          style="padding-top: 56.25%;"
-        >
-          <iframe
-            class="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/eZMrNXa2nCo?si=uOyMCr0dWwW6sXA3"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div
-          class="relative w-full "
-          style="padding-top: 56.25%;"
-        >
-          <iframe
-            class="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/x_4fQPKXDyI?si=rd7i5UKc-ZSEORW8"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    </div>
+    
 
     <div class="fade-section project-section flex flex-col items-center w-full">
       <h1
