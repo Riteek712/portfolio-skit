@@ -184,14 +184,23 @@
         >
           <ul class="list-disc list-inside text-justify gap-6">
             <li>
-              Led & contributed to the development of backend REST APIs across
-              multiple projects using Nest.js, Node.js, Express.JS, GoLang, Gin,
-              gorm, Typescript, Prisma ORM, PostgreSQL, & AWS ensuring efficient
-              and scalable solutions.
+              Led & contributed to developing backend REST APIs and UI workflows across multiple projects using Go, TypeScript/Javascript frameworks, & AWS ensuring efficient and scalable solutions.
             </li>
             <br />
             <li>
-              Integrated PhonePe Payment gateway for seamless transactions.
+              Acted as a bridge between technical and business teams, taking on product management responsibilities to define and prioritize features, resulting in a 30% increase in team efficiency and delivering projects on time. 
+            </li>
+            <br />
+            <li>
+              Collaborated with cross-functional teams to define product requirements, prioritize features, and drive product roadmaps for client projects.
+            </li>
+            <br />
+            <li>
+              Integrated a CRM system into the company project, automating lead tracking and sales management, resulting in sales team productivity and reduced manual data entry efforts.
+            </li>
+            <br />
+            <li>
+              Executed the integration of the Payment gateway, allowing for real-time transaction tracking; the tool is now utilized by over 15 team members across the finance and customer support departments.
             </li>
             <br />
             <li>
