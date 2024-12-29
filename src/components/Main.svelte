@@ -86,7 +86,7 @@
         const offsetX = (event.clientX - middleX) / middleX;
         const offsetY = (middleY - event.clientY) / middleY;
 
-        image.style.transform = `perspective(1000px) rotateY(${offsetX * 14}deg) rotateX(${offsetY * 14}deg) scale3d(1, 1, 1)`;
+        image.style.transform = `perspective(1000px) rotateY(${offsetX * 24}deg) rotateX(${offsetY * 24}deg) scale3d(1, 1, 1)`;
       });
 
       window.addEventListener("mouseleave", () => {
