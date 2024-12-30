@@ -2,6 +2,7 @@
     import "../app.css"
   import Footer from "../components/Footer.svelte";
   import Header from "../components/Header.svelte";
+  import { writable } from "svelte/store";
 
   let y: number;
   let innerHeight = 0;
@@ -12,6 +13,14 @@
   function goTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  writable({
+      title:
+        "Riteek Rakesh's Portfolio Website",
+      description:
+        "A 22-year-old passionate software developer, crafting scalable code, leading impactful projects, and driving innovation with every solution delivered.",
+      ogImage: "https://www.riteekrakesh.tech/assets/profile-pic%20(4).png",
+    });
   
 </script>
 <div class="relative flex flex-col max-w[1400px] mx-auto w-full text-sm sm:text-base min-h-screen">
