@@ -18,11 +18,23 @@
       title:
         "Riteek Rakesh's Portfolio Website",
       description:
-        "A 22-year-old passionate software developer, crafting scalable code, leading impactful projects, and driving innovation with every solution delivered.",
+        "Software Developer specializing in scalable APIs, intuitive UIs, and innovative solutions like payment gateways, CRM, email services and token management. Proficient in Go, JavaScript/TypeScript, and AWS, with a sharp focus on efficiency, optimization, and delivering exceptional user experiences.",
       ogImage: "https://www.riteekrakesh.tech/assets/profile-pic%20(4).png",
     });
   
 </script>
+<svelte:head>
+  <meta name="title" content="Riteek Rakesh's Portfolio Website" />
+  <meta name="description" content="Software Developer specializing in scalable APIs, intuitive UIs, and innovative solutions like payment gateways, CRM, email services and token management. Proficient in Go, JavaScript/TypeScript, and AWS, with a sharp focus on efficiency, optimization, and delivering exceptional user experiences." />
+
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://riteekrakesh.tech/" />
+  <meta property="og:title" content="Riteek Rakesh's Portfolio Website" />
+  <meta property="og:description" content="Software Developer specializing in scalable APIs, intuitive UIs, and innovative solutions like payment gateways, CRM, email services and token management. Proficient in Go, JavaScript/TypeScript, and AWS, with a sharp focus on efficiency, optimization, and delivering exceptional user experiences." />
+  <meta property="og:image" content="https://www.riteekrakesh.tech/assets/profile-pic%20(4).png" />
+</svelte:head>
 <div class="relative flex flex-col max-w[1400px] mx-auto w-full text-sm sm:text-base min-h-screen">
     <div class="fixed bottom-0 w-full duration-200 flex p-10 z-[10]">
         <button on:click={goTop} class="ml-auto rounded-full bg-slate-900 tx-violet-400 px-3 sm:px-4 hover:bg-slate-800 cursor-pointer">
