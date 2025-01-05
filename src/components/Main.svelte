@@ -151,9 +151,10 @@
 
       <p class=" text-[#bcbaf7] text-base sm:text-lg md:text-xl">
         A 22 year old <span class="text-[#ffffff] font-semibold"
-          >software engineer</span
-        >, delivering Code that scales, projects that lead, and solutions that
-        innovate.
+          >Software Developer</span
+        >,
+        API wizardry meets UI artistry—powered by <span class="text-[#ffffff] font-semibold"
+        >Go, JavaScript</span>, and a passion for exceptional user experiences.
       </p>
     </div>
   </section>
@@ -175,7 +176,7 @@
       >
       <span class=" text-violet-400">dev</span> <span class=" text-[#FFAD60]">:</span> <span class="text-orchid">trail</span>
       </h1>
-      <div class="w-4/5">
+      <div class="w-4.5/5 sm:w-4/5">
         <Step
           company="Timechain Labs"
           role="Software Developer"
