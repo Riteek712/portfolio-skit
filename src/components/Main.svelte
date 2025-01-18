@@ -5,7 +5,6 @@
     import WorkExperience from './Experience/WorkExperience.svelte';
     import ProjectSection from './Projects/ProjectSection.svelte';
     import { setupIntersectionObserver } from '../utils/intersectionObserver';
-    import ScrollArrow from "./shared/ScrollArrow.svelte";
   
     const skills = [
       
@@ -39,7 +38,9 @@
   <main class="flex flex-col flex-1 p-4">
     <Hero />
     
-    
+    <h1 id="skills" class="mx-auto text-center font-semibold text-4xl sm:text-5xl md:text-6xl tracking-wide underline-offset-8 hover:underline decoration-double mb-12">
+        <span class="text-violet-400">tech</span> <span class="text-[#FFAD60]">:</span> <span class="text-orchid">stack</span>
+    </h1>
     <TechSkillsCarousel {skills} direction="left" speed={30} />
     <TechSkillsCarousel {skills} direction="right" speed={30} />
     
