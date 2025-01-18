@@ -3,6 +3,7 @@
   import Footer from "../components/Footer.svelte";
   import Header from "../components/Header.svelte";
   import { writable } from "svelte/store";
+  import ScrollArrow from "../components/shared/ScrollArrow.svelte";
 
   let y: number;
   let innerHeight = 0;
@@ -40,6 +41,9 @@
         <button on:click={goTop} class="ml-auto rounded-full bg-slate-900 tx-violet-400 px-3 sm:px-4 hover:bg-slate-800 cursor-pointer">
             <i class="fa-solid fa-arrow-up grid place-items-center aspect-square"/>
         </button>
+    </div>
+    <div class="fixed bottom-0 w-full duration-200 flex p-10 z-[10]">
+        <ScrollArrow/>
     </div>
     <Header {y}/>
     <slot/>
