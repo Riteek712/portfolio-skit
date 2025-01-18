@@ -2,12 +2,13 @@
     import Card from '../Card.svelte';
   </script>
   
-  <div class="fade-section project-section flex flex-col items-center w-full">
-    <h1 id="projects" class="mx-auto text-center font-semibold text-4xl sm:text-5xl md:text-6xl tracking-wide underline-offset-8 hover:underline decoration-double">
-      <span class="text-violet-400">project</span> <span class="text-[#FFAD60]">:</span> <span class="text-orchid">forge</span>
-    </h1>
   
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full p-a">
+<div class="fade-section project-section flex flex-col items-center w-full max-w-7xl mx-auto px-4">
+  <h1 id="projects" class="mx-auto text-center font-semibold text-4xl sm:text-5xl md:text-6xl tracking-wide underline-offset-8 hover:underline decoration-double mb-12">
+      <span class="text-violet-400">project</span> <span class="text-[#FFAD60]">:</span> <span class="text-orchid">forge</span>
+  </h1>
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
         <Card
         classname=""
         href="https://github.com/Riteek712/LiveDocs"
@@ -74,8 +75,13 @@
   </div>
   
   <style>
-    .project-section h1 {
-      align-content: center;
-      margin-bottom: 1em;
+    .project-section {
+        padding: 2rem 0;
     }
-  </style>
+    
+    @media (min-width: 1024px) {
+        .project-section {
+            padding: 4rem 0;
+        }
+    }
+</style>
