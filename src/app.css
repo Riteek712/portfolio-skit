@@ -32,6 +32,8 @@
     }
   }
 
+  
+  
   .fade-in {
     animation: fadeInAnimation 1s forwards;
   }
@@ -61,6 +63,27 @@ html {
   scroll-behavior: smooth;
   /* cursor: none; */
   /* cursor: crosshair */
+}
+
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Rock Salt Font */
+.rock-salt-regular {
+  font-family: "Rock Salt", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Noto Sans JP Font with Variable Weight */
+.noto-sans-jp {
+  font-family: "Noto Sans JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 900; /* Replace <weight> with a value from 100 to 900 */
+  font-style: normal;
 }
 
 #circularcursor {

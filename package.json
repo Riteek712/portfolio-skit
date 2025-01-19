@@ -36,7 +36,10 @@
 		"@fortawesome/svelte-fontawesome": "^0.2.2",
 		"clsx": "^2.1.1",
 		"framer-motion": "^11.18.1",
+		"lucide-react": "^0.473.0",
+		"lucide-svelte": "^0.473.0",
 		"mini-svg-data-uri": "^1.4.4",
+		"react-github-calendar": "^4.5.4",
 		"tailwind-merge": "^2.6.0"
 	}
 }

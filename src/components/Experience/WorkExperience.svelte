@@ -1,11 +1,15 @@
 <script lang="ts">
-  import Step from '../Step.svelte';
+  import AnimatedTooltip from '../shared/AnimatedTooltip.svelte';
+import Step from '../Step.svelte';
 </script>
 
 <div id="WorkEX" class="fade-section flex flex-col items-center gap-16 w-full">
-  <h1 class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl underline-offset-8 tracking-wide mb-5 hover:underline decoration-double">
-    <span class="text-violet-400">dev</span> <span class="text-[#FFAD60]">:</span> <span class="text-orchid">trail</span>
-  </h1>
+  <AnimatedTooltip tooltipText="My Developer Journey">
+    <h1 class="text-violet-200 font-semibold text-4xl sm:text-5xl md:text-6xl underline-offset-8 tracking-wide mb-5 hover:underline decoration-double">
+      <span class="text-violet-400">dev</span> <span class="text-[#FFAD60]">:</span> <span class="text-orchid">trail</span>
+    </h1>
+  </AnimatedTooltip>
+  
   
   <div class="w-4.5/5 sm:w-4/5">
     <Step
