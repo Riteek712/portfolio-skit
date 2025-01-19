@@ -50,7 +50,7 @@
   }
 </style>
 
-<header class={"sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border border-solid" + (y > 0 ? " py-4 bg-slate-950" : " py-6 bg-transparent border-transparent")}>
+<header class={"sticky z-[101] top-0 duration-200 px-6 flex items-center justify-between border border-solid" + (y > 0 ? " py-4 bg-slate-950" : " py-6 bg-transparent border-transparent")}>
   <button on:click={openCV} id="cv-button" class="font-bold">
     <b class="hover:underline underline-offset-8" style="font-family: 'Rock Salt', cursive;">CV</b>
   </button>
