@@ -22,7 +22,7 @@
     onMount(setupImageTiltEffect);
   </script>
   
-  <div id="tilt" class="rounded-full relative shadow-2xl grid place-items-center">
+  <div id="tilt" class="rounded-full relative  grid place-items-center">
     <img
       src="/assets/profile-pic (4).png"
       alt="Riteek Rakesh"
