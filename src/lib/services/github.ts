@@ -5,7 +5,7 @@ export interface GithubStats {
   }
   
   export async function fetchGithubStats(): Promise<GithubStats> {
-    const token = "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";
+    const token = import.meta.env.VITE_GITHUB_TOKEN;
     
     // GraphQL query to get GitHub contribution calendar and other stats
     const query = `
