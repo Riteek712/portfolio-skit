@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { spring, type Spring } from 'svelte/motion';
+  import AnimatedTooltip from './shared/AnimatedTooltip.svelte';
 
   interface Skill {
     name: string;
@@ -22,7 +23,7 @@
   let itemWidth: number = 0;
   let position: Spring<number> = spring(0);
 
-  $: duplicatedSkills = [...skills, ...skills, ...skills, ...skills, ...skills, ...skills];
+  $: duplicatedSkills = [...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills];
 
   onMount(() => {
     const firstChild = container?.firstElementChild as HTMLDivElement;
@@ -73,16 +74,19 @@
     style="transform: translateX({$position}px); transition: transform linear;"
   >
     {#each duplicatedSkills as skill}
-      <div class="flex flex-col items-center min-w-[120px] md:min-w-[160px]">
-        <img
-          data-hover-tooltip={skill.name}
-        data-tooltip-position="top"
-          src={skill.icon}
-          alt={skill.name}
-          class="w-20 h-20 md:w-32 md:h-32 lg:w-48 lg:h-48 object-contain hover:scale-110 transition-transform duration-300"
-        />
-        <span class="mt-2 text-sm md:text-base font-medium">{skill.name}</span>
-      </div>
+      
+        <div class="flex flex-col items-center min-w-[120px] md:min-w-[160px]">
+          <img
+            data-hover-tooltip={skill.name}
+          data-tooltip-position="top"
+            src={skill.icon}
+            alt={skill.name}
+            class="w-20 h-20 md:w-32 md:h-32 lg:w-48 lg:h-48 object-contain hover:scale-110 transition-transform duration-300"
+          />
+          <span class="mt-2 text-sm md:text-base font-medium">{skill.name}</span>
+        </div>
+   
+      
     {/each}
   </div>
 </div>

@@ -5,14 +5,14 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="title" content="Riteek Rakesh's Portfolio Website" />
-  <meta name="description" content="Software Developer specializing in scalable APIs, intuitive UIs, and innovative solutions like payment gateways, CRM, email services and token management. Proficient in Go, JavaScript/TypeScript, and AWS, with a sharp focus on efficiency, optimization, and delivering exceptional user experiences." />
+	<meta name="description" content="Software Developer specializing in scalable APIs, intuitive UIs, and innovative solutions like payment gateways, CRM, email services and token management. Proficient in Go, JavaScript/TypeScript, and AWS, with a sharp focus on efficiency, optimization, and delivering exceptional user experiences." />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://riteekrakesh.tech/" />
-  <meta property="og:title" content="Riteek Rakesh's Portfolio Website" />
-  <meta property="og:description" content="Software Developer specializing in scalable APIs, intuitive UIs, and innovative solutions like payment gateways, CRM, email services and token management. Proficient in Go, JavaScript/TypeScript, and AWS, with a sharp focus on efficiency, optimization, and delivering exceptional user experiences." />
-  <meta property="og:image" content="https://www.riteekrakesh.tech/assets/profile-pic%20(4).png" />
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://riteekrakesh.tech/" />
+	<meta property="og:title" content="Riteek Rakesh's Portfolio Website" />
+	<meta property="og:description" content="Software Developer specializing in scalable APIs, intuitive UIs, and innovative solutions like payment gateways, CRM, email services and token management. Proficient in Go, JavaScript/TypeScript, and AWS, with a sharp focus on efficiency, optimization, and delivering exceptional user experiences." />
+	<meta property="og:image" content="https://www.riteekrakesh.tech/assets/profile-pic%20(4).png" />
 	<title>Riteek's Portfolio</title>
 
 	<!-- Particles.js -->
@@ -56,13 +56,26 @@
 			pointer-events: none;
 			transform: translate(-50%, -50%);
 			background-color: transparent;
-			border: 5px solid rgb(155, 5, 255);
+			border: 3px solid rgb(155, 5, 255);
 			border-radius: 50%;
 			-moz-border-radius: 50%;
 			-webkit-border-radius: 50%;
 			position: absolute;
 			z-index: 300;
+			transition: width 0.2s, height 0.2s; /* Adding smooth transition for scaling */
 		}
+
+		/* Scale the cursor size when hovering over h, p, and a tags */
+		h1, h2, h3, h4, h5, h6, a, p {
+			cursor: pointer;
+		}
+
+		/* Add hover effect to the cursor */
+		h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, a:hover, p:hover {
+			transition: width 0.2s, height 0.2s; /* Adding smooth transition for scaling */
+		}
+
+		/* Media query to hide particles on smaller screens */
 		@media screen and (max-width: 768px) {
 			#particles-js {
 				display: none;
@@ -78,9 +91,6 @@
 		<div id="particles-js" class="absolute inset-0"></div>
 	</div>
 	<script>
-		
-
-
 		function updateCursorPosition(e) {
 			const x = (e.clientX || e.touches[0].clientX) + window.scrollX;
 			const y = (e.clientY || e.touches[0].clientY) + window.scrollY;
@@ -108,6 +118,18 @@
 			updateCursorPosition(e);
 		};
 
+		// Detect when the mouse enters specific elements (h, a, p)
+		const elementsToScale = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'a', 'p'];
+		elementsToScale.forEach(selector => {
+			document.querySelectorAll(selector).forEach(element => {
+				element.addEventListener('mouseenter', () => {
+					document.documentElement.style.setProperty('--cursor-size', '80px');
+				});
+				element.addEventListener('mouseleave', () => {
+					document.documentElement.style.setProperty('--cursor-size', '40px');
+				});
+			});
+		});
 	</script>
 </body>
 

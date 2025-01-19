@@ -1,12 +1,16 @@
 <script lang="ts">
     import Card from '../Card.svelte';
+  import AnimatedTooltip from '../shared/AnimatedTooltip.svelte';
   </script>
   
   
 <div class="fade-section project-section flex flex-col items-center w-full max-w-7xl mx-auto px-4">
-  <h1 id="projects" class="mx-auto text-center font-semibold text-4xl sm:text-5xl md:text-6xl tracking-wide underline-offset-8 hover:underline decoration-double mb-12">
+  <AnimatedTooltip tooltipText="There are plenty more on my Github!">
+    <h1 id="projects" class="mx-auto text-center font-semibold text-4xl sm:text-5xl md:text-6xl tracking-wide underline-offset-8 hover:underline decoration-double mb-12">
       <span class="text-violet-400">project</span> <span class="text-[#FFAD60]">:</span> <span class="text-orchid">forge</span>
   </h1>
+  </AnimatedTooltip>
+  
   
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
         <Card
