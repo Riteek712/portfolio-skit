@@ -77,13 +77,13 @@
     <div class="w-full lg:w-1/2 space-y-8 order-2 lg:order-1">
       <!-- Typing text -->
       <div class="space-y-6 animate-fadeIn">
-          <h1 class="heading text-violet-200 font-semibold text-4xl sm:text-5xl relative">
+          <h1 class="heading text-violet-200 font-semibold text-3xl sm:text-4xl relative">
               <span class="inline-block bg-violet-400 text-white py-1 px-2 rounded-md">{$typingText} <span class="cursor animate-blink">|</span></span>
               
           </h1>
 
           <!-- Description -->
-          <p class="text-[#bcbaf7] text-base sm:text-lg md:text-xl leading-relaxed animate-slideUp">
+          <p class="text-[#bcbaf7] text-base sm:text-lg md:text-xl text-center leading-relaxed animate-slideUp">
             A 22-year-old <span class="text-[#ffffff] font-semibold">Software Developer</span> with a passion for <span class="text-[#ffffff] font-semibold">Go</span>, <span class="text-[#ffffff] font-semibold">JavaScript, Java</span>, and building intuitive, scalable solutions.
           </p>
 
@@ -124,7 +124,7 @@
 
 <style>
   .heading {
-      font-size: clamp(2rem, 5vw, 4rem);
+      font-size: clamp(1.5rem, 5vw, 3rem);
       line-height: 1.2;
       word-break: break-word;
       text-align: left;
