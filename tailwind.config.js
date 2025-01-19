@@ -8,6 +8,9 @@ export default {
       },
       fontFamily: {
         righteous: ['Righteous', 'sans-serif'],
+        luckiest: ['Luckiest Guy', 'cursive'],
+        noto: ['Noto Sans JP', 'sans-serif'],
+        rock: ['Rock Salt', 'cursive'],
       },
       keyframes: {
         slowBounce: {

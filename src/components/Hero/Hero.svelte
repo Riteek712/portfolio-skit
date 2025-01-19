@@ -69,15 +69,16 @@
 
 <section
   id="introPage"
-  class="fade-section min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 px-4 sm:px-6 lg:px-8 py-12"
+  class="fade-section min-h-screen flex flex-col  items-center justify-center gap-8 px-4 sm:px-6 lg:px-8 py-12"
 >
   <!-- Left section -->
-  <div class="w-full lg:w-1/2 space-y-8 order-2 lg:order-1">
+   <div class="flex flex-col lg:flex-row items-center justify-center">
+    <div class="w-full lg:w-1/2 space-y-8 order-2 lg:order-1">
       <!-- Typing text -->
       <div class="space-y-6 animate-fadeIn">
-          <h1 class="heading text-violet-200 font-semibold text-4xl sm:text-5xl">
-              <span class="inline-block">{$typingText}</span>
-              <span class="cursor animate-blink">|</span>
+          <h1 class="heading text-violet-200 font-semibold text-4xl sm:text-5xl relative">
+              <span class="inline-block bg-violet-400 text-white py-1 px-2 rounded-md">{$typingText} <span class="cursor animate-blink">|</span></span>
+              
           </h1>
 
           <!-- Description -->
@@ -85,34 +86,39 @@
             A 22-year-old <span class="text-[#ffffff] font-semibold">Software Developer</span> with a passion for <span class="text-[#ffffff] font-semibold">Go</span>, <span class="text-[#ffffff] font-semibold">JavaScript, Java</span>, and building intuitive, scalable solutions.
           </p>
 
-          <!-- Thought of the Day -->
+          <p class="noto-sans-jp text-red-500 text-4xl sm:text-5xl">いらっしゃいませ</p>
           
 
-          <!-- GitHub Stats and Calendar -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 animate-slideUp [animation-delay:200ms]">
-              
-
-              <!-- Currently Reading -->
-              <div class="bg-white/5 backdrop-blur-lg rounded-xl p-4 hover:bg-white/10 transition-all sm:col-span-2 lg:col-span-3">
-                  <h3 class="text-white font-medium">Currently Reading</h3>
-                  <p class="text-xl font-semibold text-white mt-2">{currentBook.title}</p>
-                  <p class="text-sm text-violet-200 mt-1">by {currentBook.author}</p>
-                  <div class="mt-2 w-full bg-white/10 rounded-full h-2">
-                      <div class="bg-violet-400 h-2 rounded-full" style="width: {currentBook.progress}"></div>
-                  </div>
-              </div>
-          </div>
+          <!-- Thought of the Day -->
+          
       </div>
   </div>
 
   <!-- Right section (Profile Image) -->
   <div class="w-full lg:w-1/2 order-1 lg:order-2 animate-fadeIn [animation-delay:300ms]">
       <ProfileImage />
-      <div class="bg-white/5 backdrop-blur-lg rounded-xl p-4 hover:bg-white/10 transition-all animate-slideUp">
+      
+  </div>
+   </div>
+  
+<div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 pt-4 animate-slideUp [animation-delay:200ms]">
+    
+    <div class="bg-white/5 backdrop-blur-lg rounded-xl p-4 hover:bg-white/10 transition-all">
+        <h3 class="text-white font-medium">Currently Reading</h3>
+        <p class="text-xl font-semibold text-white mt-2">{currentBook.title}</p>
+        <p class="text-sm text-violet-200 mt-1">by {currentBook.author}</p>
+        <div class="mt-2 w-full bg-white/10 rounded-full h-2">
+            <div class="bg-violet-400 h-2 rounded-full" style="width: {currentBook.progress}"></div>
+        </div>
+    </div>
+    
+    <div class="bg-white/5 backdrop-blur-lg rounded-xl p-4 hover:bg-white/10 transition-all">
         <h3 class="text-white font-medium">Thought of the Day</h3>
         <p class="text-lg text-white mt-2">{$thoughtOfTheDay}</p>
     </div>
-  </div>
+</div>
+
+  
 </section>
 
 <style>
