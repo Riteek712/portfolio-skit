@@ -40,7 +40,7 @@
   }
 
   onMount(() => {
-    setupGlobalTiltEffect();
+    // setupGlobalTiltEffect();
     setupImageTiltEffect();
   });
 </script>
