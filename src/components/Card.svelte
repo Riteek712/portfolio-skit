@@ -36,6 +36,7 @@
     .card-container {
       width: 100%;
       padding: 1rem;
+      
     }
   
     @media (min-width: 640px) {
@@ -52,6 +53,7 @@
       width: 100%;
       height: 100%;
       background: transparent;
+      border-radius: 5px;
     }
   
     .card h2 {
@@ -65,6 +67,7 @@
       height: 100%;
       padding: 1.5rem;
       border: 2px solid black;
+      border-radius: 10px;
       background: rgba(0, 0, 0, 0.822);
       color: #ffffff;
       transition: all 0.25s ease;
