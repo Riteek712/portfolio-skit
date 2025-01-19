@@ -40,6 +40,11 @@
       border-radius: 0.5rem;
       white-space: nowrap;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+    .tooltip.show {
+      opacity: 1;
     }
     .tooltip-content {
       position: relative;
@@ -55,25 +60,24 @@
   </style>
   
   <div
-  class="relative group"
-  role="tooltip"
-  aria-label={tooltipText}
-  on:mouseenter={() => hovered.set(true)}
-  on:mouseleave={() => hovered.set(false)}
-  on:mousemove={handleMouseMove}
->
-  {#if $hovered}
-    <div
-      class="tooltip"
-      style="transform: translateX({$translateX}px) rotate({$rotate}deg);"
-    >
-      <div class="gradient-line" style="width: 20%; left: 40%;"></div>
-      <div class="tooltip-content">
-        <div class="font-bold text-white text-base">{tooltipText}</div>
+    class="relative group"
+    role="tooltip"
+    aria-label={tooltipText}
+    on:mouseenter={() => hovered.set(true)}
+    on:mouseleave={() => hovered.set(false)}
+    on:mousemove={handleMouseMove}
+  >
+    {#if $hovered}
+      <div
+        class="tooltip show"
+        style="transform: translateX({$translateX}px) rotate({$rotate}deg);"
+      >
+        <div class="gradient-line" style="width: 20%; left: 40%;"></div>
+        <div class="tooltip-content">
+          <div class="font-bold text-white text-base">{tooltipText}</div>
+        </div>
       </div>
-    </div>
-  {/if}
-  
+    {/if}
     <slot></slot>
   </div>
   
