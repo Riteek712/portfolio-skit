@@ -12,7 +12,7 @@
       { name: 'MongoDB', icon: '/assets/skills/mongodb.png' },
       { name: 'PostgreSQL', icon: '/assets/skills/psql.png' },
       { name: 'Docker', icon: '/assets/skills/docker.png' },
-      { name: 'Kubernates', icon: '/assets/skills/k8.png' },
+      // { name: 'Kubernates', icon: '/assets/skills/k8.png' },
       { name: 'Git', icon: '/assets/skills/git.png' },
       { name: 'Redis', icon: '/assets/skills/redis.png' },
       { name: 'AWS', icon: '/assets/skills/aws.png' }
