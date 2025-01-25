@@ -29,9 +29,9 @@
 <style>
    header {
     /* Bulb effect background */
-    background: linear-gradient(to bottom, rgba(18, 1, 43, 0.9) 20%, rgba(255, 255, 255, 0.1) 90%);
+    /* background: linear-gradient(to bottom, rgba(18, 1, 43, 0.9) 20%, rgba(255, 255, 255, 0.1) 90%); */
     /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.5); */
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    /* transition: background 0.3s ease, box-shadow 0.3s ease; */
   }
   .social-icon {
     margin: 0 15px; /* Adjust spacing between icons */
