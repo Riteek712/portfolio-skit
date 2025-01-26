@@ -20,7 +20,7 @@
 
   function openCV() {
     window.open(
-      "https://drive.google.com/file/d/1c-ySQQsDxWTArKELSfcdXl_WBDzXOV9r/view",
+      "https://drive.google.com/file/d/158bjwQlSuBIxpP3z3nCYRqqQxpMuOi4x/view?usp=drive_link",
       "_blank"
     );
   }
