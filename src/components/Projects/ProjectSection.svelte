@@ -13,6 +13,24 @@
   
   
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+      <Card
+        classname=""
+        href="https://github.com/Riteek712/ticket-booking-system"
+        iconname="fa-solid fa-ticket"
+        title="Event Management System"
+        description="A queue-based ticket distribution system built with Go and Fiber, optimizing performance and reducing ticket allocation latency by 30% for a seamless user experience."
+        tags={[
+          "Go",
+          "Fiber",
+          "JWT",
+          "Swagger",
+          "Redis",
+          "Docker",
+          "RabbitMQ",
+          "PostgreSQL",
+        ]}
+      />
+      
         <Card
         classname=""
         href="https://github.com/Riteek712/LiveDocs"
@@ -75,6 +93,7 @@
           description="This project implements a simple URL shortener service using FastAPI. The service allows users to shorten URLs, create custom slugs, and set expiration dates for the shortened URLs. It also provides analytics for tracking the number of clicks on the shortened URLs."
           tags={["Python3", "FastAPI", "Swagger.io", "PostgreSQL", "Redis"]}
         />
+        
     </div>
   </div>
   
