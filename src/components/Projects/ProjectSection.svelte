@@ -30,6 +30,23 @@
           "PostgreSQL",
         ]}
       />
+      <Card
+        classname=""
+        href="https://github.com/Riteek712/taskmanager-turborepo"
+        iconname="fa-solid fa-tasks"
+        title="TaskFlow – Task Management System"
+        description="A monorepo-based task management system built with Turborepo, featuring optimized database queries, intuitive UI, and improved developer experience through well-documented APIs."
+        tags={[
+          "Turborepo",
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "Nest.js",
+          "PostgreSQL",
+          "Prisma ORM",
+          "Tailwind CSS",
+        ]}
+      />
       
         <Card
         classname=""
