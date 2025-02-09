@@ -47,6 +47,24 @@
           "Tailwind CSS",
         ]}
       />
+      <Card
+  classname=""
+  href="https://github.com/Riteek712/drugX"
+  iconname="fa-solid fa-pills"
+  title="DrugX – Drug Discovery Platform"
+  description="A generative AI-powered drug discovery platform enabling protein structure prediction, collaborative research, and secure authentication using Resend. Built with Next.js, TypeScript, and NVIDIA AI for interactive user experiences."
+  tags={[
+    "Next.js",
+    "React.js",
+    "Node.js",
+    "TypeScript",
+    "next-auth",
+    "MongoDB",
+    "Tailwind CSS",
+    "NVIDIA AI",
+    "React Chart.js",
+  ]}
+/>
       
         <Card
         classname=""
