@@ -16,14 +16,14 @@
   }
 
   export let direction: 'left' | 'right' = 'left';
-  export let speed: number = 30; // seconds for one complete rotation
+  export let speed: number ; // seconds for one complete rotation
   export let skills: Skill[] = []; // Now accepting skills as a prop
 
   let container: HTMLDivElement;
   let itemWidth: number = 0;
   let position: Spring<number> = spring(0);
 
-  $: duplicatedSkills = [...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills];
+  $: duplicatedSkills = [...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills, ...skills];
 
   onMount(() => {
     const firstChild = container?.firstElementChild as HTMLDivElement;
