@@ -8,7 +8,7 @@
   import AnimatedTooltip from "./shared/AnimatedTooltip.svelte";
   
     const skills = [
-      { name: 'Express', icon: '/assets/skills/express.png' },
+      
       { name: 'MongoDB', icon: '/assets/skills/mongodb.png' },
       { name: 'PostgreSQL', icon: '/assets/skills/psql.png' },
       { name: 'Docker', icon: '/assets/skills/docker.png' },
@@ -35,6 +35,7 @@
       { name: 'NestJS', icon: 'https://nestjs.com/img/logo-small.svg' },
       { name: 'Next.js', icon: 'https://img.icons8.com/fluent-systems-filled/512/FFFFFF/nextjs.png' },
       { name: 'Svelte', icon: 'https://svelte.dev/svelte-logo.svg' },
+      { name: 'Express', icon: '/assets/skills/express.png' },
       { name: 'React', icon: '/assets/skills/react.png' }
       
     ];
@@ -55,15 +56,15 @@
     
     <div class="relative z-0"> <!-- Ensure the carousels are under the tooltip -->
       <AnimatedTooltip tooltipText="Programming Languages">
-        <TechSkillsCarousel skills={PLskills} direction="right" speed={30} />
+        <TechSkillsCarousel skills={PLskills} direction="right" speed={10} />
       </AnimatedTooltip>
       
       <AnimatedTooltip tooltipText="Frameworks">
-        <TechSkillsCarousel skills={Frskills} direction="left" speed={30} />
+        <TechSkillsCarousel skills={Frskills} direction="left" speed={10} />
       </AnimatedTooltip>
       
       <AnimatedTooltip tooltipText="Tools and Databases">
-        <TechSkillsCarousel {skills} direction="right" speed={30} />
+        <TechSkillsCarousel {skills} direction="right" speed={10} />
       </AnimatedTooltip>
       
     </div>
