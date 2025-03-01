@@ -87,7 +87,7 @@
             A 22-year-old <span class="text-[#ffffff] font-semibold">Software Developer</span> with a passion for <span class="text-[#ffffff] font-semibold">Go</span>, <span class="text-[#ffffff] font-semibold">JavaScript, Java</span>, and building intuitive, scalable solutions.
           </p>
 
-          <p class="noto-sans-jp text-red-500 text-4xl sm:text-5xl text-center"><span><AnimatedTooltip tooltipText="Nice to have you here!" >こちらこそよろしくお願いします！</AnimatedTooltip></span></p>
+          <p class="noto-sans-jp text-red-500 text-4xl sm:text-5xl text-center"><span><AnimatedTooltip tooltipText="Good to see you here!" >お会いできてうれしいです！</AnimatedTooltip></span></p>
           
 
           <!-- Thought of the Day -->
