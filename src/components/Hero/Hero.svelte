@@ -31,7 +31,7 @@
   const error = writable<string | null>(null);
 
   // Thought of the Day
-  const thoughtOfTheDay = writable("“The best way to predict the future is to invent it.” - Alan Kay");
+  const thoughtOfTheDay = writable("“Beaware of legacy code - it's just someone else's quick fix that outlived deadline.” - Alan Kay");
 
   const currentBook = {
       title: "Tuesdays with Morrie",
