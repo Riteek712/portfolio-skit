@@ -61,7 +61,6 @@
           githubStats.set(stats);
       } catch (e) {
           error.set('Failed to load GitHub stats');
-          console.error(e);
       } finally {
           loading.set(false);
       }
