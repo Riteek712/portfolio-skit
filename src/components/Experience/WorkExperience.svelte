@@ -3,8 +3,8 @@
 
   // State for expanded sections
   let expandedSections = {
-    developer: false,
-    intern: false,
+    generativeStudio: false,
+    timechainLabs: false,
     projectLead: false
   };
 
@@ -29,7 +29,7 @@
       
       <!-- Experience Items -->
       <div class="space-y-12">
-        <!-- Timechain Labs - Software Developer -->
+        <!-- Generative Studio - Full-stack Developer -->
         <div class="experience-item relative flex flex-col md:flex-row items-start gap-8 transition-all duration-700 ease-out">
           <!-- Timeline Dot -->
           <div class="absolute left-6 md:left-1/2 md:transform md:-translate-x-1/2 top-8 w-4 h-4 bg-violet-400 rounded-full border-4 border-black shadow-lg z-10"></div>
@@ -42,9 +42,9 @@
                   <i class="fa fa-code text-white text-xl"></i>
                 </div>
                 <div>
-                  <h3 class="text-violet-400 font-bold text-xl group-hover:text-white transition-colors duration-300">Software Developer</h3>
-                  <p class="text-[#FFAD60] font-semibold text-lg">Timechain Labs</p>
-                  <p class="text-gray-300 text-sm">06/2024 - Present, Remote</p>
+                  <h3 class="text-violet-400 font-bold text-xl group-hover:text-white transition-colors duration-300">Full-stack Developer</h3>
+                  <p class="text-[#FFAD60] font-semibold text-lg">Generative Studio</p>
+                  <p class="text-gray-300 text-sm">May 2025 - Present, Remote</p>
                 </div>
               </div>
             </div>
@@ -53,6 +53,74 @@
           <!-- Details -->
           <div class="ml-16 md:ml-0 md:w-1/2 md:pl-8">
             <div class="bg-black/40 backdrop-blur-sm border border-orchid/30 rounded-2xl p-6 hover:border-orchid/60 transition-all duration-300">
+              <ul class="space-y-4 text-gray-200">
+                <!-- Always visible points -->
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-[#FFAD60] rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>Frontend Development:</strong> Developing dynamic web applications using SvelteKit, TypeScript, and Shadcn-Svelte with focus on responsiveness and high performance.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-[#FFAD60] rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>Backend Services:</strong> Building robust backend services with Python (FastAPI), designing scalable APIs, and integrating AI-powered features.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-[#FFAD60] rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>AI Integration:</strong> Actively transitioning into backend + AI engineering role, focusing on scalable system design and AI integration workflows.</span>
+                </li>
+                
+                <!-- Expandable points -->
+                {#if expandedSections.generativeStudio}
+                  <li class="flex items-start gap-3 animate-fade-in">
+                    <div class="w-2 h-2 bg-[#FFAD60] rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Modern Tech Stack:</strong> Working with cutting-edge technologies including AI Agents, FastAPI, and modern frontend frameworks.</span>
+                  </li>
+                  <li class="flex items-start gap-3 animate-fade-in">
+                    <div class="w-2 h-2 bg-[#FFAD60] rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Performance Optimization:</strong> Implementing high-performance solutions with focus on scalability and user experience.</span>
+                  </li>
+                  <li class="flex items-start gap-3 animate-fade-in">
+                    <div class="w-2 h-2 bg-[#FFAD60] rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Backend-First Strategy:</strong> Developing backend-first development strategies for modern web applications.</span>
+                  </li>
+                {/if}
+              </ul>
+              
+              <!-- Show More/Less Button -->
+              <button 
+                on:click={() => toggleSection('generativeStudio')}
+                class="mt-4 px-4 py-2 bg-gradient-to-r from-violet-400 to-orchid text-white rounded-lg hover:from-violet-500 hover:to-orchid transition-all duration-300 text-sm font-medium flex items-center gap-2 group"
+              >
+                {expandedSections.generativeStudio ? 'Show Less' : 'Show More'}
+                <i class="fa fa-chevron-{expandedSections.generativeStudio ? 'up' : 'down'} transition-transform duration-300 group-hover:scale-110"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timechain Labs - Software Developer -->
+        <div class="experience-item relative flex flex-col md:flex-row items-start gap-8 transition-all duration-700 ease-out">
+          <!-- Timeline Dot -->
+          <div class="absolute left-6 md:left-1/2 md:transform md:-translate-x-1/2 top-8 w-4 h-4 bg-orchid rounded-full border-4 border-black shadow-lg z-10"></div>
+          
+          <!-- Content Card -->
+          <div class="ml-16 md:ml-0 md:w-1/2 md:pr-8 md:text-right">
+            <div class="bg-black/60 backdrop-blur-sm border border-orchid/30 rounded-2xl p-6 hover:border-orchid/60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(218,112,214,0.3)] group">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-orchid to-[#FFAD60] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <i class="fa fa-code text-white text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-orchid font-bold text-xl group-hover:text-white transition-colors duration-300">Software Developer</h3>
+                  <p class="text-[#FFAD60] font-semibold text-lg">Timechain Labs</p>
+                  <p class="text-gray-300 text-sm">Jul 2024 - Apr 2025, Remote</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Details -->
+          <div class="ml-16 md:ml-0 md:w-1/2 md:pl-8">
+            <div class="bg-black/40 backdrop-blur-sm border border-violet-400/30 rounded-2xl p-6 hover:border-violet-400/60 transition-all duration-300">
               <ul class="space-y-4 text-gray-200">
                 <!-- Always visible points -->
                 <li class="flex items-start gap-3">
@@ -69,7 +137,7 @@
                 </li>
                 
                 <!-- Expandable points -->
-                {#if expandedSections.developer}
+                {#if expandedSections.timechainLabs}
                   <li class="flex items-start gap-3 animate-fade-in">
                     <div class="w-2 h-2 bg-[#FFAD60] rounded-full mt-2 flex-shrink-0"></div>
                     <span><strong>Cross-functional Leadership:</strong> Collaborated with teams to define product requirements, prioritize features, and drive roadmaps.</span>
@@ -87,11 +155,11 @@
               
               <!-- Show More/Less Button -->
               <button 
-                on:click={() => toggleSection('developer')}
-                class="mt-4 px-4 py-2 bg-gradient-to-r from-violet-400 to-orchid text-white rounded-lg hover:from-violet-500 hover:to-orchid transition-all duration-300 text-sm font-medium flex items-center gap-2 group"
+                on:click={() => toggleSection('timechainLabs')}
+                class="mt-4 px-4 py-2 bg-gradient-to-r from-orchid to-[#FFAD60] text-white rounded-lg hover:from-orchid hover:to-[#FFAD60] transition-all duration-300 text-sm font-medium flex items-center gap-2 group"
               >
-                {expandedSections.developer ? 'Show Less' : 'Show More'}
-                <i class="fa fa-chevron-{expandedSections.developer ? 'up' : 'down'} transition-transform duration-300 group-hover:scale-110"></i>
+                {expandedSections.timechainLabs ? 'Show Less' : 'Show More'}
+                <i class="fa fa-chevron-{expandedSections.timechainLabs ? 'up' : 'down'} transition-transform duration-300 group-hover:scale-110"></i>
               </button>
             </div>
           </div>
@@ -137,7 +205,7 @@
                 </li>
                 
                 <!-- Expandable points -->
-                {#if expandedSections.intern}
+                {#if expandedSections.timechainLabs}
                   <li class="flex items-start gap-3 animate-fade-in">
                     <div class="w-2 h-2 bg-[#FFAD60] rounded-full mt-2 flex-shrink-0"></div>
                     <span><strong>Database Management:</strong> Implemented transactional queries, pagination, and authorization systems.</span>
@@ -151,11 +219,11 @@
               
               <!-- Show More/Less Button -->
               <button 
-                on:click={() => toggleSection('intern')}
+                on:click={() => toggleSection('timechainLabs')}
                 class="mt-4 px-4 py-2 bg-gradient-to-r from-orchid to-[#FFAD60] text-white rounded-lg hover:from-orchid hover:to-[#FFAD60] transition-all duration-300 text-sm font-medium flex items-center gap-2 group"
               >
-                {expandedSections.intern ? 'Show Less' : 'Show More'}
-                <i class="fa fa-chevron-{expandedSections.intern ? 'up' : 'down'} transition-transform duration-300 group-hover:scale-110"></i>
+                {expandedSections.timechainLabs ? 'Show Less' : 'Show More'}
+                <i class="fa fa-chevron-{expandedSections.timechainLabs ? 'up' : 'down'} transition-transform duration-300 group-hover:scale-110"></i>
               </button>
             </div>
           </div>
