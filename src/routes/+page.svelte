@@ -1,10 +1,9 @@
 <script lang="ts">
-  import BackgroundGradientAnimation from "../components/BackgroundGradientAnimation.svelte";
-    import Main from "../components/Main.svelte";
+  import StarsBackground from "../components/StarsBackground.svelte";
+  import Main from "../components/Main.svelte";
 </script>
-<BackgroundGradientAnimation>
-    <Main />
 
-</BackgroundGradientAnimation>
-
+<StarsBackground starColor="#ffffff">
+  <Main />
+</StarsBackground>
 

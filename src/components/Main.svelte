@@ -48,25 +48,61 @@
   
   <main class="flex flex-col flex-1 p-4">
     <Hero />
-    <AnimatedTooltip tooltipText="Things I have worked on..">
-      <h1 id="skills" class="mx-auto text-center font-semibold text-4xl sm:text-5xl md:text-6xl tracking-wide underline-offset-8 hover:underline decoration-double mb-12 z-50">
-        <span class="text-violet-400">tech</span> <span class="text-[#FFAD60]">:</span> <span class="text-orchid">stack</span>
-    </h1>
+    <AnimatedTooltip tooltipText="How I turn ideas into products">
+      <h1
+        id="skills"
+        class="mx-auto text-center font-semibold text-4xl sm:text-5xl md:text-6xl tracking-wide underline-offset-8 hover:underline decoration-double mb-6 z-50"
+      >
+        <span class="text-violet-400">tech</span> <span class="text-[#FFAD60]">:</span>
+        <span class="text-orchid">stack</span>
+      </h1>
     </AnimatedTooltip>
-    
-    <div class="relative z-0"> <!-- Ensure the carousels are under the tooltip -->
-      <AnimatedTooltip tooltipText="Programming Languages">
+
+    <div
+      class="max-w-5xl mx-auto mt-2 mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-left text-xs sm:text-sm text-slate-200"
+    >
+      <div>
+        <p class="font-semibold text-violet-300">Backend engineering</p>
+        <p class="mt-1 text-slate-400">
+          Go, Node.js, NestJS, PostgreSQL, MongoDB, Redis – high-performance APIs and reliable data
+          flows.
+        </p>
+      </div>
+      <div>
+        <p class="font-semibold text-violet-300">AI &amp; integrations</p>
+        <p class="mt-1 text-slate-400">
+          Python and modern tooling for AI-powered features, automation, and smart backend
+          services.
+        </p>
+      </div>
+      <div>
+        <p class="font-semibold text-violet-300">Frontend + UX</p>
+        <p class="mt-1 text-slate-400">
+          React, Next.js, Svelte – production-ready interfaces with a real focus on UX and polish.
+        </p>
+      </div>
+      <div>
+        <p class="font-semibold text-violet-300">DevOps &amp; deployment</p>
+        <p class="mt-1 text-slate-400">
+          Docker, AWS, Git – shipping, scaling, and maintaining reliable systems in production.
+        </p>
+      </div>
+    </div>
+
+    <div class="relative z-0">
+      <!-- Ensure the carousels are under the tooltip -->
+      <AnimatedTooltip tooltipText="Backend &amp; languages">
         <TechSkillsCarousel skills={PLskills} direction="right" speed={10} />
       </AnimatedTooltip>
-      
-      <AnimatedTooltip tooltipText="Frameworks">
+
+      <AnimatedTooltip tooltipText="Frontend &amp; frameworks">
         <TechSkillsCarousel skills={Frskills} direction="left" speed={10} />
       </AnimatedTooltip>
-      
-      <AnimatedTooltip tooltipText="Tools and Databases">
+
+      <AnimatedTooltip tooltipText="Databases &amp; tooling">
         <TechSkillsCarousel {skills} direction="right" speed={10} />
       </AnimatedTooltip>
-      
+
     </div>
 
     
