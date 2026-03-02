@@ -20,9 +20,9 @@
       return idx;
   }
 
-  const nameIdx = typeWriter("Hi! I'm Riteek Rakesh, Full-Stack Developer", 100);
+  const nameIdx = typeWriter("Hi! I'm Riteek Rakesh, Product Engineer & Software Developer", 100);
   const typingText = derived(nameIdx, ($nameIdx) =>
-      "Hi! I'm Riteek Rakesh, Full-Stack Developer".slice(0, $nameIdx)
+      "Hi! I'm Riteek Rakesh, Product Engineer & Software Developer".slice(0, $nameIdx)
   );
 
   // GitHub stats store
@@ -34,9 +34,9 @@
   const thoughtOfTheDay = writable("“Beaware of legacy code - it's just someone else's quick fix that outlived deadline.” - Alan Kay");
 
   const currentBook = {
-      title: "Tuesdays with Morrie",
-      author: "Mitch Albom",
-      progress: "72%"
+      title: "The Well of Ascension",
+      author: "Brandon Sanderson",
+      progress: "42%"
   };
 
   // Animate numbers
@@ -83,7 +83,10 @@
 
           <!-- Description -->
           <p class="text-[#bcbaf7] text-base sm:text-lg md:text-xl text-justify leading-relaxed animate-slideUp">
-            A 22-year-old <span class="text-[#ffffff] font-semibold">Software Developer</span> with a passion for <span class="text-[#ffffff] font-semibold">Go</span>, <span class="text-[#ffffff] font-semibold">JavaScript, Java</span>, and building intuitive, scalable solutions.
+            I help build production-ready products from API to UI—focusing on
+            <span class="text-[#ffffff] font-semibold"> scalable backend systems</span>,
+            <span class="text-[#ffffff] font-semibold"> AI-powered workflows</span>, and
+            <span class="text-[#ffffff] font-semibold"> intuitive user experiences</span> using Go, Python, TypeScript, and modern web frameworks.
           </p>
 
           <p class="noto-sans-jp text-red-500 text-4xl sm:text-5xl text-center"><span><AnimatedTooltip tooltipText="Good to see you here!" >お会いできてうれしいです！</AnimatedTooltip></span></p>
